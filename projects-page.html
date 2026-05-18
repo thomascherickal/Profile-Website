@@ -1,788 +1,1475 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — Thomas Cherickal · The Digital Futurist</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Thomas Cherickal · The Digital Futurist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
 
-<style>
-:root {
-  --bg:        #080c10;
-  --bg2:       #0d1117;
-  --surface:   #141c24;
-  --surface2:  #1a2432;
-  --border:    #1e2d3d;
-  --border2:   #263548;
+  <style>
+    :root {
+      --bg: #080c10;
+      --bg2: #0d1117;
+      --surface: #141c24;
+      --surface2: #1a2432;
+      --border: #1e2d3d;
+      --border2: #263548;
 
-  --py:        #4b91d1;
-  --py-dim:    #1e3a52;
-  --py-glow:   #4b91d133;
+      --py: #4b91d1;
+      --py-dim: #1e3a52;
+      --py-glow: #4b91d133;
 
-  --rs:        #d4622a;
-  --rs-dim:    #4a1f0c;
-  --rs-glow:   #d4622a33;
+      --rs: #d4622a;
+      --rs-dim: #4a1f0c;
+      --rs-glow: #d4622a33;
 
-  --go:        #00adb5;
-  --go-dim:    #002e31;
+      --go: #00adb5;
+      --go-dim: #002e31;
 
-  --mojo:      #9b5de5;
-  --mojo-dim:  #2c1a52;
-  --mojo-glow: #9b5de533;
+      --mojo: #9b5de5;
+      --mojo-dim: #2c1a52;
+      --mojo-glow: #9b5de533;
 
-  --gemma:     #34d399;
-  --gemma-dim: #0a3325;
-  --gemma-glow:#34d39933;
+      --gemma: #34d399;
+      --gemma-dim: #0a3325;
+      --gemma-glow: #34d39933;
 
-  --upcoming:     #fbbf24;
-  --upcoming-dim: #3b2a06;
+      --upcoming: #fbbf24;
+      --upcoming-dim: #3b2a06;
 
-  --git: #f97316;
-  --db:  #60a5fa;
+      --git: #f97316;
+      --db: #60a5fa;
 
-  --text:  #e2e8f0;
-  --text2: #8b9aad;
-  --text3: #4a5a6a;
+      --text: #e2e8f0;
+      --text2: #8b9aad;
+      --text3: #4a5a6a;
 
-  --font-sans: 'Open Sans', sans-serif;
-  --font-mono: 'Courier New', Courier, monospace;
-}
+      --font-sans: 'Open Sans', sans-serif;
+      --font-mono: 'Courier New', Courier, monospace;
+    }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+    /* ── WordPress isolation wrapper ──────────────────────── */
+    #tc-projects-root {
+      font-family: 'Open Sans', sans-serif !important;
+      font-size: 14px !important;
+      line-height: 1.7 !important;
+      color: #e2e8f0 !important;
+      box-sizing: border-box !important;
+    }
 
-body {
-  color: var(--text);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
+    /* ── Force headings to Times New Roman — overrides any WP theme ── */
+    #tc-projects-root h1,
+    #tc-projects-root h2,
+    #tc-projects-root h3,
+    #tc-projects-root h4,
+    #tc-projects-root h5,
+    #tc-projects-root h6 {
+      font-family: 'Times New Roman', Times, serif !important;
+      font-weight: 700 !important;
+      text-transform: none !important;
+    }
 
-.page-wrap {
-  background: var(--bg);
-  position: relative;
-  overflow: hidden;
-}
-.page-wrap::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px);
-  pointer-events: none;
-  z-index: 9999;
-}
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.page-wrap::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(30,45,61,.25) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(30,45,61,.25) 1px,transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+    body {
+      color: var(--text);
+      font-family: var(--font-sans) !important;
+      font-size: 14px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-/* ── HERO ─────────────────────────────────────────────── */
-.hero { padding: 96px 0 56px; position: relative; overflow: hidden; }
+    .page-wrap {
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
 
-.hero-bg-art { position: absolute; top: 0; right: -80px; width: 580px; height: 480px; pointer-events: none; opacity: .45; }
+    .page-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, .06) 2px, rgba(0, 0, 0, .06) 4px);
+      pointer-events: none;
+      z-index: 9999;
+    }
 
-.hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px; letter-spacing: .22em; color: var(--gemma);
-  text-transform: uppercase; margin-bottom: 18px;
-  display: flex; align-items: center; gap: 10px;
-}
-.hero-eyebrow::before { content:''; width:28px; height:1px; background:var(--gemma); }
+    .page-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(30, 45, 61, .25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 45, 61, .25) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-.prompt-line {
-  font-family: var(--font-mono);
-  font-size: 12px; color: var(--text3); margin-bottom: 10px;
-  display: flex; align-items: center; gap: 7px;
-}
-.prompt-line .caret { color: var(--gemma); }
-.prompt-line .cursor {
-  display: inline-block; width: 8px; height: 14px;
-  background: var(--gemma); vertical-align: middle;
-  animation: blink 1.1s step-end infinite;
-}
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+    }
 
-.hero-title {
-  font-family: var(--font-sans);
-  font-size: clamp(40px,6.5vw,80px); font-weight: 800;
-  line-height: .97; letter-spacing: -.03em;
-  color: var(--text); margin-bottom: 26px;
-}
-.hero-title .accent-py { color: var(--py); }
-.hero-title .accent-rs { color: var(--rs); }
+    /* ── HERO ─────────────────────────────────────────────── */
+    .hero {
+      padding: 96px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.hero-subtitle { font-size: 15px; color: var(--text2); max-width: 540px; line-height: 1.85; margin-bottom: 40px; }
+    .hero-bg-art {
+      position: absolute;
+      top: 0;
+      right: -80px;
+      width: 580px;
+      height: 480px;
+      pointer-events: none;
+      opacity: .45;
+    }
 
-.hero-stats { display: flex; gap: 36px; flex-wrap: wrap; }
-.stat { display: flex; flex-direction: column; gap: 3px; }
-.stat-num { font-family: var(--font-sans); font-size: 28px; font-weight: 800; line-height: 1; }
-.stat-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--text3); text-transform: uppercase; }
+    /* ── Hero container centring ──────────────────────── */
+    .hero .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center !important;
+    }
 
-/* ── Divider ─────────────────────────────────────────── */
-.divider { height: 1px; background: linear-gradient(90deg,transparent,var(--border),transparent); position: relative; z-index: 1; }
+    .hero-eyebrow {
+      font-family: var(--font-mono) !important;
+      font-size: 11px;
+      letter-spacing: .22em;
+      color: var(--gemma);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
 
-/* ── Sections ────────────────────────────────────────── */
-.section { padding: 56px 0; position: relative; z-index: 1; }
+    .hero-eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gemma);
+    }
 
-.section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 36px; }
+    .prompt-line {
+      font-family: var(--font-mono) !important;
+      font-size: 12px;
+      color: var(--text3);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
 
-.lang-badge {
-  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
-  letter-spacing: .1em; padding: 4px 12px; border-radius: 2px;
-  text-transform: uppercase; flex-shrink: 0;
-}
-.lang-badge.py   { background:var(--py-dim);   color:var(--py);   border:1px solid var(--py);   }
-.lang-badge.rs   { background:var(--rs-dim);   color:var(--rs);   border:1px solid var(--rs);   }
-.lang-badge.go   { background:var(--go-dim);   color:var(--go);   border:1px solid var(--go);   }
-.lang-badge.mojo { background:var(--mojo-dim); color:var(--mojo); border:1px solid var(--mojo); }
+    .prompt-line .caret {
+      color: var(--gemma);
+    }
 
-.section-title { font-family: var(--font-sans); font-size: 26px; font-weight: 700; letter-spacing: -.02em; }
-.section-line  { flex: 1; height: 1px; background: var(--border); }
+    .prompt-line .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background: var(--gemma);
+      vertical-align: middle;
+      animation: blink 1.1s step-end infinite;
+    }
 
-/* ── Cards ───────────────────────────────────────────── */
-.cards-grid       { display: grid; grid-template-columns: repeat(auto-fill,minmax(340px,1fr)); gap: 20px; }
-.cards-grid.minor { grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); }
+    @keyframes blink {
 
-.card {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
-  padding: 28px; display: flex; flex-direction: column; gap: 14px;
-  position: relative; overflow: hidden;
-  transition: border-color .25s, transform .25s, box-shadow .25s;
-  animation: fadeUp .45s ease both;
-}
-.card::before { content:''; position:absolute; top:0; left:0; width:100%; height:3px; }
-.card::after  {
-  content:''; position:absolute; bottom:0; right:0; width:52px; height:52px;
-  border-bottom:1px solid var(--border2); border-right:1px solid var(--border2);
-  border-radius:0 0 4px 0; opacity:.45;
-}
-.card.py::before   { background:linear-gradient(90deg,var(--py),transparent);   }
-.card.rs::before   { background:linear-gradient(90deg,var(--rs),transparent);   }
-.card.go::before   { background:linear-gradient(90deg,var(--go),transparent);   }
-.card.mojo::before { background:linear-gradient(90deg,var(--mojo),transparent); }
+      0%,
+      100% {
+        opacity: 1
+      }
 
-.card:hover { transform:translateY(-4px); border-color:var(--border2); }
-.card.py:hover   { box-shadow:0 14px 40px var(--py-glow);   }
-.card.rs:hover   { box-shadow:0 14px 40px var(--rs-glow);   }
-.card.mojo:hover { box-shadow:0 14px 40px var(--mojo-glow); }
+      50% {
+        opacity: 0
+      }
+    }
 
-@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-.cards-grid .card:nth-child(1){animation-delay:.05s}
-.cards-grid .card:nth-child(2){animation-delay:.10s}
-.cards-grid .card:nth-child(3){animation-delay:.15s}
+    .hero-title {
+      font-family: 'Times New Roman', Times, serif !important;
+      font-size: clamp(57px, 9.1vw, 114px) !important;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      color: var(--text);
+      margin-bottom: 26px;
+      text-transform: none !important;
+    }
 
-.card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
-.card-icon { width:40px; height:40px; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
-.card.py  .card-icon { background:var(--py-dim);   }
-.card.rs  .card-icon { background:var(--rs-dim);   }
-.card.go  .card-icon { background:var(--go-dim);   }
-.card.mojo .card-icon{ background:var(--mojo-dim); }
+    .hero-title .accent-py {
+      color: var(--py);
+    }
 
-.card-status {
-  font-family:var(--font-mono); font-size:10px; letter-spacing:.1em;
-  padding:3px 8px; border-radius:2px; text-transform:uppercase; white-space:nowrap;
-}
-.status-active   { background:rgba(52,211,153,.10); color:var(--gemma); border:1px solid rgba(52,211,153,.28); }
-.status-wip      { background:rgba(249,115,22,.10);  color:#fb923c;      border:1px solid rgba(249,115,22,.28);  }
-.status-research { background:rgba(155,93,229,.10);  color:var(--mojo);  border:1px solid rgba(155,93,229,.28);  }
-.status-stable   { background:rgba(75,145,209,.10);  color:var(--py);    border:1px solid rgba(75,145,209,.28);  }
+    .hero-title .accent-rs {
+      color: var(--rs);
+    }
 
-.card-title { font-family:var(--font-sans); font-size:20px; font-weight:700; letter-spacing:-.02em; color:var(--text); }
-.card-desc  { font-size:13px; color:var(--text2); line-height:1.78; }
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--text2);
+      max-width: 540px;
+      line-height: 1.85;
+      margin-bottom: 40px;
+      text-align: center !important;
+    }
 
-.tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:4px; }
-.tag  {
-  font-family:var(--font-mono); font-size:10px; padding:2px 8px; border-radius:2px;
-  letter-spacing:.04em; border:1px solid var(--border2); color:var(--text3); background:var(--bg2);
-}
-.tag.gemma { border-color:rgba(52,211,153,.38); color:var(--gemma); background:rgba(52,211,153,.06); }
-.tag.db    { border-color:rgba(96,165,250,.38);  color:var(--db);    background:rgba(96,165,250,.06); }
-.tag.git   { border-color:rgba(249,115,22,.38);  color:var(--git);   background:rgba(249,115,22,.06); }
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.card-metrics { display:flex; gap:20px; padding-top:12px; border-top:1px solid var(--border); margin-top:auto; }
-.metric { display:flex; flex-direction:column; gap:2px; }
-.metric-val { font-family:var(--font-mono); font-size:12px; font-weight:700; color:var(--text); }
-.metric-key { font-family:var(--font-mono); font-size:10px; color:var(--text3); text-transform:uppercase; letter-spacing:.09em; }
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
 
-/* ── Gemma strip ─────────────────────────────────────── */
-.gemma-strip {
-  background:linear-gradient(135deg,var(--gemma-dim),var(--bg2));
-  border:1px solid rgba(52,211,153,.22); border-radius:4px;
-  padding:36px 40px; position:relative; overflow:hidden; z-index:1; margin:44px 0;
-}
-.gemma-strip::before {
-  content:'GEMMA'; position:absolute; right:-12px; top:-28px;
-  font-family:var(--font-sans); font-size:130px; font-weight:800;
-  color:rgba(52,211,153,.04); letter-spacing:-.05em; pointer-events:none; user-select:none;
-}
-.gemma-strip-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; }
-.gemma-label    { font-family:var(--font-mono); font-size:10px; letter-spacing:.2em; color:var(--gemma); text-transform:uppercase; margin-bottom:10px; }
-.gemma-heading  { font-family:var(--font-sans); font-size:26px; font-weight:700; color:var(--text); letter-spacing:-.02em; margin-bottom:14px; line-height:1.2; }
-.gemma-body     { font-size:13px; color:var(--text2); line-height:1.8; }
-.gemma-models   { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.model-chip     {
-  background:var(--surface2); border:1px solid rgba(52,211,153,.18); border-radius:3px;
-  padding:12px 14px; transition:border-color .2s,background .2s;
-}
-.model-chip:hover { border-color:rgba(52,211,153,.45); background:rgba(52,211,153,.05); }
-.model-name { font-family:var(--font-mono); font-size:12px; font-weight:700; color:var(--gemma); margin-bottom:4px; }
-.model-meta { font-size:11px; color:var(--text3); }
+    .stat-num {
+      font-family: var(--font-sans) !important;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
 
-/* ── Upcoming Projects ───────────────────────────────── */
-.upcoming-section { padding:56px 0; position:relative; z-index:1; }
+    .stat-label {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      letter-spacing: .14em;
+      color: var(--text3);
+      text-transform: uppercase;
+    }
 
-.upcoming-header { display:flex; align-items:center; gap:14px; margin-bottom:28px; }
-.upcoming-badge  {
-  font-family:var(--font-mono); font-size:11px; font-weight:700; letter-spacing:.1em;
-  padding:4px 12px; border-radius:2px; text-transform:uppercase; flex-shrink:0;
-  background:var(--upcoming-dim); color:var(--upcoming); border:1px solid var(--upcoming);
-}
-.upcoming-title { font-family:var(--font-sans); font-size:26px; font-weight:700; letter-spacing:-.02em; color:var(--text); }
+    /* ── Divider ─────────────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      position: relative;
+      z-index: 1;
+    }
 
-.upcoming-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+    /* ── Sections ────────────────────────────────────────── */
+    .section {
+      padding: 56px 0;
+      position: relative;
+      z-index: 1;
+    }
 
-.upcoming-card {
-  background:var(--surface); border:1px solid var(--border);
-  border-left:3px solid var(--upcoming); border-radius:0 4px 4px 0;
-  padding:20px 22px; display:flex; flex-direction:column; gap:8px;
-  transition:border-color .2s,background .2s;
-}
-.upcoming-card:hover { background:var(--surface2); border-color:rgba(251,191,36,.35); border-left-color:var(--upcoming); }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
 
-.upcoming-card-title {
-  font-family:var(--font-sans); font-size:16px; font-weight:700; color:var(--text);
-  display:flex; align-items:center; gap:8px;
-}
-.upcoming-card-title .ico { font-size:18px; }
+    .lang-badge {
+      font-family: var(--font-mono) !important;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      padding: 4px 12px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
 
-.upcoming-card-lang {
-  font-family:var(--font-mono); font-size:9px; letter-spacing:.1em;
-  padding:2px 7px; border-radius:2px; text-transform:uppercase; margin-left:auto; flex-shrink:0;
-}
-.upcoming-card-lang.py   { background:var(--py-dim);   color:var(--py);   }
-.upcoming-card-lang.rs   { background:var(--rs-dim);   color:var(--rs);   }
-.upcoming-card-lang.go   { background:var(--go-dim);   color:var(--go);   }
-.upcoming-card-lang.mojo { background:var(--mojo-dim); color:var(--mojo); }
+    .lang-badge.py {
+      background: var(--py-dim);
+      color: var(--py);
+      border: 1px solid var(--py);
+    }
 
-.upcoming-card-desc { font-size:12px; color:var(--text2); line-height:1.7; }
-.upcoming-card-eta  { font-family:var(--font-mono); font-size:10px; color:var(--upcoming); letter-spacing:.08em; margin-top:2px; }
+    .lang-badge.rs {
+      background: var(--rs-dim);
+      color: var(--rs);
+      border: 1px solid var(--rs);
+    }
 
-/* ── Toolchain ───────────────────────────────────────── */
-.toolchain { padding:44px 0; border-top:1px solid var(--border); position:relative; z-index:1; }
-.toolchain-title { font-family:var(--font-mono); font-size:10px; letter-spacing:.18em; color:var(--text3); text-transform:uppercase; margin-bottom:20px; }
-.tool-row { display:flex; flex-wrap:wrap; gap:10px; }
-.tool-pill {
-  display:flex; align-items:center; gap:7px;
-  background:var(--surface); border:1px solid var(--border); border-radius:2px;
-  padding:6px 12px; font-family:var(--font-mono); font-size:11px; color:var(--text2);
-  transition:border-color .2s,color .2s;
-}
-.tool-pill:hover { border-color:var(--border2); color:var(--text); }
-.tool-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+    .lang-badge.go {
+      background: var(--go-dim);
+      color: var(--go);
+      border: 1px solid var(--go);
+    }
 
-/* ── Footer ──────────────────────────────────────────── */
-.page-footer { padding:36px 0; border-top:1px solid var(--border); position:relative; z-index:1; }
-.footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
-.footer-brand { font-family:var(--font-sans); font-size:17px; font-weight:700; color:var(--text); }
-.footer-brand span { color:var(--gemma); }
-.footer-copy { font-family:var(--font-mono); font-size:10px; color:var(--text3); text-align:right; line-height:1.7; }
+    .lang-badge.mojo {
+      background: var(--mojo-dim);
+      color: var(--mojo);
+      border: 1px solid var(--mojo);
+    }
 
-.minor-note { font-family:var(--font-mono); font-size:10px; color:var(--text3); letter-spacing:.12em; text-transform:uppercase; margin-bottom:24px; }
+    .section-title {
+      font-family: 'Times New Roman', Times, serif !important;
+      font-size: 38px !important;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      text-transform: none !important;
+    }
 
-@media (max-width:720px) {
-  .cards-grid,.upcoming-grid { grid-template-columns:1fr; }
-  .gemma-strip-grid { grid-template-columns:1fr; }
-  .hero-title { font-size:38px; }
-  .hero { padding:56px 0 36px; }
-}
-</style>
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Cards ───────────────────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+
+    .cards-grid.minor {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+      animation: fadeUp .45s ease both;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 52px;
+      height: 52px;
+      border-bottom: 1px solid var(--border2);
+      border-right: 1px solid var(--border2);
+      border-radius: 0 0 4px 0;
+      opacity: .45;
+    }
+
+    .card.py::before {
+      background: linear-gradient(90deg, var(--py), transparent);
+    }
+
+    .card.rs::before {
+      background: linear-gradient(90deg, var(--rs), transparent);
+    }
+
+    .card.go::before {
+      background: linear-gradient(90deg, var(--go), transparent);
+    }
+
+    .card.mojo::before {
+      background: linear-gradient(90deg, var(--mojo), transparent);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border2);
+    }
+
+    .card.py:hover {
+      box-shadow: 0 14px 40px var(--py-glow);
+    }
+
+    .card.rs:hover {
+      box-shadow: 0 14px 40px var(--rs-glow);
+    }
+
+    .card.mojo:hover {
+      box-shadow: 0 14px 40px var(--mojo-glow);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .cards-grid .card:nth-child(1) {
+      animation-delay: .05s
+    }
+
+    .cards-grid .card:nth-child(2) {
+      animation-delay: .10s
+    }
+
+    .cards-grid .card:nth-child(3) {
+      animation-delay: .15s
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .card.py .card-icon {
+      background: var(--py-dim);
+    }
+
+    .card.rs .card-icon {
+      background: var(--rs-dim);
+    }
+
+    .card.go .card-icon {
+      background: var(--go-dim);
+    }
+
+    .card.mojo .card-icon {
+      background: var(--mojo-dim);
+    }
+
+    .card-status {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      letter-spacing: .1em;
+      padding: 3px 8px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .status-active {
+      background: rgba(52, 211, 153, .10);
+      color: var(--gemma);
+      border: 1px solid rgba(52, 211, 153, .28);
+    }
+
+    .status-wip {
+      background: rgba(249, 115, 22, .10);
+      color: #fb923c;
+      border: 1px solid rgba(249, 115, 22, .28);
+    }
+
+    .status-research {
+      background: rgba(155, 93, 229, .10);
+      color: var(--mojo);
+      border: 1px solid rgba(155, 93, 229, .28);
+    }
+
+    .status-stable {
+      background: rgba(75, 145, 209, .10);
+      color: var(--py);
+      border: 1px solid rgba(75, 145, 209, .28);
+    }
+
+    .card-title {
+      font-family: 'Times New Roman', Times, serif !important;
+      font-size: 29px !important;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      color: var(--text);
+      text-transform: none !important;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.78;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 2px;
+      letter-spacing: .04em;
+      border: 1px solid var(--border2);
+      color: var(--text3);
+      background: var(--bg2);
+    }
+
+    .tag.gemma {
+      border-color: rgba(52, 211, 153, .38);
+      color: var(--gemma);
+      background: rgba(52, 211, 153, .06);
+    }
+
+    .tag.db {
+      border-color: rgba(96, 165, 250, .38);
+      color: var(--db);
+      background: rgba(96, 165, 250, .06);
+    }
+
+    .tag.git {
+      border-color: rgba(249, 115, 22, .38);
+      color: var(--git);
+      background: rgba(249, 115, 22, .06);
+    }
+
+    .card-metrics {
+      display: flex;
+      gap: 20px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .metric-val {
+      font-family: var(--font-mono) !important;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .metric-key {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    /* ── Gemma strip ─────────────────────────────────────── */
+    .gemma-strip {
+      background: linear-gradient(135deg, var(--gemma-dim), var(--bg2));
+      border: 1px solid rgba(52, 211, 153, .22);
+      border-radius: 4px;
+      padding: 36px 40px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      margin: 44px 0;
+    }
+
+    .gemma-strip::before {
+      content: 'GEMMA';
+      position: absolute;
+      right: -12px;
+      top: -28px;
+      font-family: var(--font-sans) !important;
+      font-size: 130px;
+      font-weight: 800;
+      color: rgba(52, 211, 153, .04);
+      letter-spacing: -.05em;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .gemma-strip-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .gemma-label {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      letter-spacing: .2em;
+      color: var(--gemma);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .gemma-heading {
+      font-family: 'Times New Roman', Times, serif !important;
+      font-size: 38px !important;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.01em;
+      margin-bottom: 14px;
+      line-height: 1.2;
+      text-transform: none !important;
+    }
+
+    .gemma-body {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.8;
+    }
+
+    .gemma-models {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .model-chip {
+      background: var(--surface2);
+      border: 1px solid rgba(52, 211, 153, .18);
+      border-radius: 3px;
+      padding: 12px 14px;
+      transition: border-color .2s, background .2s;
+    }
+
+    .model-chip:hover {
+      border-color: rgba(52, 211, 153, .45);
+      background: rgba(52, 211, 153, .05);
+    }
+
+    .model-name {
+      font-family: var(--font-mono) !important;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gemma);
+      margin-bottom: 4px;
+    }
+
+    .model-meta {
+      font-size: 11px;
+      color: var(--text3);
+    }
+
+    /* ── Upcoming Projects ───────────────────────────────── */
+    .upcoming-section {
+      padding: 56px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .upcoming-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .upcoming-badge {
+      font-family: var(--font-mono) !important;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      padding: 4px 12px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      background: var(--upcoming-dim);
+      color: var(--upcoming);
+      border: 1px solid var(--upcoming);
+    }
+
+    .upcoming-title {
+      font-family: 'Times New Roman', Times, serif !important;
+      font-size: 38px !important;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      color: var(--text);
+      text-transform: none !important;
+    }
+
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .upcoming-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--upcoming);
+      border-radius: 0 4px 4px 0;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color .2s, background .2s;
+    }
+
+    .upcoming-card:hover {
+      background: var(--surface2);
+      border-color: rgba(251, 191, 36, .35);
+      border-left-color: var(--upcoming);
+    }
+
+    .upcoming-card-title {
+      font-family: 'Times New Roman', Times, serif !important;
+      font-size: 23px !important;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: none !important;
+    }
+
+    .upcoming-card-title .ico {
+      font-size: 18px;
+    }
+
+    .upcoming-card-lang {
+      font-family: var(--font-mono) !important;
+      font-size: 9px;
+      letter-spacing: .1em;
+      padding: 2px 7px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .upcoming-card-lang.py {
+      background: var(--py-dim);
+      color: var(--py);
+    }
+
+    .upcoming-card-lang.rs {
+      background: var(--rs-dim);
+      color: var(--rs);
+    }
+
+    .upcoming-card-lang.go {
+      background: var(--go-dim);
+      color: var(--go);
+    }
+
+    .upcoming-card-lang.mojo {
+      background: var(--mojo-dim);
+      color: var(--mojo);
+    }
+
+    .upcoming-card-desc {
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    .upcoming-card-eta {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      color: var(--upcoming);
+      letter-spacing: .08em;
+      margin-top: 2px;
+    }
+
+    /* ── Toolchain ───────────────────────────────────────── */
+    .toolchain {
+      padding: 44px 0;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .toolchain-title {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      letter-spacing: .18em;
+      color: var(--text3);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tool-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tool-pill {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 6px 12px;
+      font-family: var(--font-mono) !important;
+      font-size: 11px;
+      color: var(--text2);
+      transition: border-color .2s, color .2s;
+    }
+
+    .tool-pill:hover {
+      border-color: var(--border2);
+      color: var(--text);
+    }
+
+    .tool-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    .page-footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-sans) !important;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .footer-brand span {
+      color: var(--gemma);
+    }
+
+    .footer-copy {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      color: var(--text3);
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    .minor-note {
+      font-family: var(--font-mono) !important;
+      font-size: 10px;
+      color: var(--text3);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width:720px) {
+
+      .cards-grid,
+      .upcoming-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gemma-strip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 38px;
+      }
+
+      .hero {
+        padding: 56px 0 36px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="page-wrap">
+  <div id="tc-projects-root">
+    <div class="page-wrap">
 
-<!-- ══════════════════ HERO ══════════════════════════════ -->
-<section class="hero">
+      <!-- ══════════════════ HERO ══════════════════════════════ -->
+      <section class="hero">
 
-  <svg class="hero-bg-art" viewBox="0 0 580 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <radialGradient id="hglow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%"   stop-color="#34d399" stop-opacity="0.12"/>
-        <stop offset="100%" stop-color="transparent"/>
-      </radialGradient>
-    </defs>
-    <circle cx="290" cy="240" r="240" fill="url(#hglow)"/>
-    <g fill="none" stroke="#1e2d3d" stroke-width="0.5">
-      <line x1="60"  y1="70"  x2="200" y2="150"/>
-      <line x1="200" y1="150" x2="370" y2="80"/>
-      <line x1="370" y1="80"  x2="470" y2="190"/>
-      <line x1="470" y1="190" x2="410" y2="310"/>
-      <line x1="410" y1="310" x2="200" y2="150"/>
-      <line x1="200" y1="150" x2="170" y2="310"/>
-      <line x1="170" y1="310" x2="410" y2="310"/>
-      <line x1="290" y1="410" x2="170" y2="310"/>
-      <line x1="290" y1="410" x2="410" y2="310"/>
-      <line x1="370" y1="80"  x2="290" y2="410"/>
-    </g>
-    <circle cx="60"  cy="70"  r="3" fill="#4b91d1" opacity="0.8"/>
-    <circle cx="200" cy="150" r="5" fill="#34d399" opacity="0.9"/>
-    <circle cx="370" cy="80"  r="3" fill="#d4622a" opacity="0.8"/>
-    <circle cx="470" cy="190" r="4" fill="#9b5de5" opacity="0.7"/>
-    <circle cx="410" cy="310" r="3" fill="#00adb5" opacity="0.8"/>
-    <circle cx="170" cy="310" r="4" fill="#4b91d1" opacity="0.6"/>
-    <circle cx="290" cy="410" r="3" fill="#34d399" opacity="0.7"/>
-    <text x="210" y="145" font-family="'Courier New',monospace" font-size="9" fill="#34d399" opacity="0.8">GenAI</text>
-    <text x="375" y="75"  font-family="'Courier New',monospace" font-size="9" fill="#d4622a" opacity="0.8">Rust</text>
-    <text x="46"  y="65"  font-family="'Courier New',monospace" font-size="9" fill="#4b91d1" opacity="0.8">Python</text>
-    <text x="475" y="186" font-family="'Courier New',monospace" font-size="9" fill="#9b5de5" opacity="0.8">Mojo</text>
-    <text x="415" y="305" font-family="'Courier New',monospace" font-size="9" fill="#00adb5" opacity="0.8">Go</text>
-  </svg>
+        <svg class="hero-bg-art" viewBox="0 0 580 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="hglow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#34d399" stop-opacity="0.12" />
+              <stop offset="100%" stop-color="transparent" />
+            </radialGradient>
+          </defs>
+          <circle cx="290" cy="240" r="240" fill="url(#hglow)" />
+          <g fill="none" stroke="#1e2d3d" stroke-width="0.5">
+            <line x1="60" y1="70" x2="200" y2="150" />
+            <line x1="200" y1="150" x2="370" y2="80" />
+            <line x1="370" y1="80" x2="470" y2="190" />
+            <line x1="470" y1="190" x2="410" y2="310" />
+            <line x1="410" y1="310" x2="200" y2="150" />
+            <line x1="200" y1="150" x2="170" y2="310" />
+            <line x1="170" y1="310" x2="410" y2="310" />
+            <line x1="290" y1="410" x2="170" y2="310" />
+            <line x1="290" y1="410" x2="410" y2="310" />
+            <line x1="370" y1="80" x2="290" y2="410" />
+          </g>
+          <circle cx="60" cy="70" r="3" fill="#4b91d1" opacity="0.8" />
+          <circle cx="200" cy="150" r="5" fill="#34d399" opacity="0.9" />
+          <circle cx="370" cy="80" r="3" fill="#d4622a" opacity="0.8" />
+          <circle cx="470" cy="190" r="4" fill="#9b5de5" opacity="0.7" />
+          <circle cx="410" cy="310" r="3" fill="#00adb5" opacity="0.8" />
+          <circle cx="170" cy="310" r="4" fill="#4b91d1" opacity="0.6" />
+          <circle cx="290" cy="410" r="3" fill="#34d399" opacity="0.7" />
+          <text x="210" y="145" font-family="'Courier New',monospace" font-size="9" fill="#34d399"
+            opacity="0.8">GenAI</text>
+          <text x="375" y="75" font-family="'Courier New',monospace" font-size="9" fill="#d4622a"
+            opacity="0.8">Rust</text>
+          <text x="46" y="65" font-family="'Courier New',monospace" font-size="9" fill="#4b91d1"
+            opacity="0.8">Python</text>
+          <text x="475" y="186" font-family="'Courier New',monospace" font-size="9" fill="#9b5de5"
+            opacity="0.8">Mojo</text>
+          <text x="415" y="305" font-family="'Courier New',monospace" font-size="9" fill="#00adb5"
+            opacity="0.8">Go</text>
+        </svg>
 
-  <div class="container">
-    <p class="hero-eyebrow">thomascherickal.com · The Digital Futurist</p>
+        <div class="container">
+          <p class="hero-eyebrow">thomascherickal.com · The Digital Futurist</p>
 
-    <div class="prompt-line">
-      <span class="caret">❯</span>
-      <span>ls ~/projects --lang=all --filter=genai --sort=impact</span>
-      <span class="cursor"></span>
-    </div>
+          <div class="prompt-line">
+            <span class="caret">❯</span>
+            <span>ls ~/projects --lang=all --filter=genai --sort=impact</span>
+            <span class="cursor"></span>
+          </div>
 
-    <h1 class="hero-title" style="text-align:center">
-      Upcoming<br>
-      <span class="accent-py">Open-Source</span><br>
-      <span class="accent-rs">Projects</span>
-    </h1>
+          <h1 class="hero-title">
+            Upcoming<br>
+            <span class="accent-py">Open-Source</span><br>
+            <span class="accent-rs">Projects</span>
+          </h1>
 
-    <p class="hero-subtitle">
-      Bleeding-edge agentic systems, local LLM inference, and high-performance
-      tooling — built for the era where AI runs on your machine, not someone else's cloud.
-    </p>
+          <p class="hero-subtitle">
+            Bleeding-edge agentic systems, local LLM inference, and high-performance
+            tooling — built for the era where AI runs on your machine, not someone else's cloud.
+          </p>
 
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num" style="color:var(--py)">6</span>
-        <span class="stat-label">Planned Repos</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" style="color:var(--rs)">4</span>
-        <span class="stat-label">Languages</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" style="color:var(--gemma)">Gemma</span>
-        <span class="stat-label">Primary SLM Family</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" style="color:var(--go)">100%</span>
-        <span class="stat-label">Local-First AI</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════ GEMMA SPOTLIGHT ══════════════════════ -->
-<div class="container">
-  <div class="gemma-strip">
-    <div class="gemma-strip-grid">
-      <div>
-        <p class="gemma-label">⬡ Local Inference Stack</p>
-        <h2 class="gemma-heading">Powered by the<br>Gemma Family</h2>
-        <p class="gemma-body">
-          Every project defaults to Google's Gemma SLM family — run via LM Studio or
-          llama.cpp on commodity hardware (2 GB VRAM, 16 GB RAM). No API keys,
-          no egress costs, no data leaving the machine.
-        </p>
-      </div>
-      <div class="gemma-models">
-        <div class="model-chip">
-          <div class="model-name">Gemma 3 4B</div>
-          <div class="model-meta">INT4 · fits 4 GB VRAM<br>Primary workhorse</div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num" style="color:var(--py)">12</span>
+              <span class="stat-label">Planned Repos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" style="color:var(--rs)">4</span>
+              <span class="stat-label">Languages</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" style="color:var(--gemma)">Gemma</span>
+              <span class="stat-label">Primary SLM Family</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" style="color:var(--go)">100%</span>
+              <span class="stat-label">Local-First AI</span>
+            </div>
+          </div>
         </div>
-        <div class="model-chip">
-          <div class="model-name">Gemma 4 E2B</div>
-          <div class="model-meta">Q4_K_M · 6 GB RAM<br>Reasoning tasks</div>
-        </div>
-        <div class="model-chip">
-          <div class="model-name">Gemma 4 E4B</div>
-          <div class="model-meta">MoE · 2B active params<br>Ultra-efficient</div>
-        </div>
-        <div class="model-chip">
-          <div class="model-name">Gemma 3n</div>
-          <div class="model-meta">Edge-native · 1 GB<br>Embedded agents</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
 
 
-<!-- ══════════════════ PYTHON PROJECTS ══════════════════════ -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="lang-badge py">Python</span>
-      <h2 class="section-title">Major Projects</h2>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="cards-grid">
-
-      <div class="card py">
-        <div class="card-head">
-          <div class="card-icon">🧠</div>
-          <span class="card-status status-active">Active</span>
-        </div>
-        <h3 class="card-title">GemmaForge</h3>
-        <p class="card-desc">
-          A Python SDK wrapping LM Studio's OpenAI-compatible API for the full
-          Gemma SLM family. Supports streaming, function-calling, structured JSON
-          output, and multi-modal prompts — a drop-in replacement for the OpenAI
-          SDK with zero cloud dependency.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">Gemma 3 / 4</span>
-          <span class="tag gemma">LM Studio</span>
-          <span class="tag db">SQLite cache</span>
-          <span class="tag git">GitHub</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Pydantic v2</span>
-          <span class="tag">asyncio</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--py)">OpenAI-compat</span><span class="metric-key">API surface</span></div>
-          <div class="metric"><span class="metric-val">Local only</span><span class="metric-key">Inference</span></div>
-          <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+      <!-- ══════════════════ GEMMA SPOTLIGHT ══════════════════════ -->
+      <div class="container">
+        <div class="gemma-strip">
+          <div class="gemma-strip-grid">
+            <div>
+              <p class="gemma-label">⬡ Local Inference Stack</p>
+              <h2 class="gemma-heading">Powered by the<br>Gemma Family</h2>
+              <p class="gemma-body">
+                Every project defaults to Google's Gemma SLM family — run via LM Studio or
+                llama.cpp on commodity hardware (2 GB VRAM, 16 GB RAM). No API keys,
+                no egress costs, no data leaving the machine.
+              </p>
+            </div>
+            <div class="gemma-models">
+              <div class="model-chip">
+                <div class="model-name">Gemma 3 4B</div>
+                <div class="model-meta">INT4 · fits 4 GB VRAM<br>Primary workhorse</div>
+              </div>
+              <div class="model-chip">
+                <div class="model-name">Gemma 4 E2B</div>
+                <div class="model-meta">Q4_K_M · 6 GB RAM<br>Reasoning tasks</div>
+              </div>
+              <div class="model-chip">
+                <div class="model-name">Gemma 4 E4B</div>
+                <div class="model-meta">MoE · 2B active params<br>Ultra-efficient</div>
+              </div>
+              <div class="model-chip">
+                <div class="model-name">Gemma 3n</div>
+                <div class="model-meta">Edge-native · 1 GB<br>Embedded agents</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="card py">
-        <div class="card-head">
-          <div class="card-icon">🤖</div>
-          <span class="card-status status-active">Active</span>
+
+      <!-- ══════════════════ PYTHON PROJECTS ══════════════════════ -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="lang-badge py">Python</span>
+            <h2 class="section-title">Major Projects</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="cards-grid">
+
+            <div class="card py">
+              <div class="card-head">
+                <div class="card-icon">🧠</div>
+                <span class="card-status status-active">Active</span>
+              </div>
+              <h3 class="card-title">GemmaForge</h3>
+              <p class="card-desc">
+                A Python SDK wrapping LM Studio's OpenAI-compatible API for the full
+                Gemma SLM family. Supports streaming, function-calling, structured JSON
+                output, and multi-modal prompts — a drop-in replacement for the OpenAI
+                SDK with zero cloud dependency.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 3 / 4</span>
+                <span class="tag gemma">LM Studio</span>
+                <span class="tag db">SQLite cache</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Pydantic v2</span>
+                <span class="tag">asyncio</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--py)">OpenAI-compat</span><span
+                    class="metric-key">API surface</span></div>
+                <div class="metric"><span class="metric-val">Local only</span><span class="metric-key">Inference</span>
+                </div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card py">
+              <div class="card-head">
+                <div class="card-icon">🤖</div>
+                <span class="card-status status-active">Active</span>
+              </div>
+              <h3 class="card-title">AgentStack-Local</h3>
+              <p class="card-desc">
+                CrewAI + LangGraph multi-agent orchestration configured entirely around
+                local Gemma inference. Agents browse the web, write and execute code,
+                query databases, and produce verifiable outputs — zero cloud LLM calls,
+                full DAG workflow control.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 4 E4B</span>
+                <span class="tag">CrewAI</span>
+                <span class="tag">LangGraph</span>
+                <span class="tag db">PostgreSQL</span>
+                <span class="tag git">GitLab CI</span>
+                <span class="tag">Playwright</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--py)">Multi-Agent</span><span
+                    class="metric-key">Architecture</span></div>
+                <div class="metric"><span class="metric-val">DAG</span><span class="metric-key">Workflow</span></div>
+                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card py">
+              <div class="card-head">
+                <div class="card-icon">🔬</div>
+                <span class="card-status status-wip">WIP</span>
+              </div>
+              <h3 class="card-title">QuantumCircuit-AI</h3>
+              <p class="card-desc">
+                Hybrid quantum-classical ML pipeline bridging Qiskit circuits with
+                Gemma-generated circuit descriptions. SQLite caches transpiled circuits;
+                Redis pub/sub streams partial results to a FastAPI frontend targeting
+                IBMQ simulators and real QPU backends.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 3 4B</span>
+                <span class="tag">Qiskit</span>
+                <span class="tag db">SQLite · Redis</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PennyLane</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--py)">Hybrid</span><span
+                    class="metric-key">Quantum + ML</span></div>
+                <div class="metric"><span class="metric-val">Redis</span><span class="metric-key">Streaming</span></div>
+                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <h3 class="card-title">AgentStack-Local</h3>
-        <p class="card-desc">
-          CrewAI + LangGraph multi-agent orchestration configured entirely around
-          local Gemma inference. Agents browse the web, write and execute code,
-          query databases, and produce verifiable outputs — zero cloud LLM calls,
-          full DAG workflow control.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">Gemma 4 E4B</span>
-          <span class="tag">CrewAI</span>
-          <span class="tag">LangGraph</span>
-          <span class="tag db">PostgreSQL</span>
-          <span class="tag git">GitLab CI</span>
-          <span class="tag">Playwright</span>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════ RUST PROJECTS ═══════════════════════ -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="lang-badge rs">Rust</span>
+            <h2 class="section-title">Major Projects</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="cards-grid">
+
+            <div class="card rs">
+              <div class="card-head">
+                <div class="card-icon">⚡</div>
+                <span class="card-status status-active">Active</span>
+              </div>
+              <h3 class="card-title">InferCore</h3>
+              <p class="card-desc">
+                Minimal Rust inference runtime for GGUF quantised models. Wraps llama.cpp
+                via safe FFI bindings, exposes a streaming gRPC API, and compiles to a
+                single static binary deployable on Raspberry Pi 5 or commodity laptops
+                with as little as 2 GB VRAM.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">GGUF Gemma</span>
+                <span class="tag">llama.cpp FFI</span>
+                <span class="tag">tonic gRPC</span>
+                <span class="tag db">SQLite session log</span>
+                <span class="tag git">GitLab</span>
+                <span class="tag">WASM target</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">&lt;5 MB</span><span
+                    class="metric-key">Binary size</span></div>
+                <div class="metric"><span class="metric-val">gRPC</span><span class="metric-key">API</span></div>
+                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card rs">
+              <div class="card-head">
+                <div class="card-icon">🔍</div>
+                <span class="card-status status-stable">Stable</span>
+              </div>
+              <h3 class="card-title">GitGuard</h3>
+              <p class="card-desc">
+                CLI security scanner for Git repositories written in Rust. Detects
+                secrets, leaked credentials, and policy violations across the full
+                commit history. Plugs natively into GitHub Actions and GitLab CI;
+                a local Gemma agent via InferCore summarises every finding in plain English.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma summary</span>
+                <span class="tag git">GitHub Actions · GitLab CI</span>
+                <span class="tag db">SQLite audit log</span>
+                <span class="tag">clap · git2-rs</span>
+                <span class="tag">regex</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">Full history</span><span
+                    class="metric-key">Scan depth</span></div>
+                <div class="metric"><span class="metric-val">CI-native</span><span class="metric-key">Integration</span>
+                </div>
+                <div class="metric"><span class="metric-val">GPL-3</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card rs">
+              <div class="card-head">
+                <div class="card-icon">🌐</div>
+                <span class="card-status status-research">Research</span>
+              </div>
+              <h3 class="card-title">BlockLedger-RS</h3>
+              <p class="card-desc">
+                Experimental Rust blockchain ledger with an embedded Gemma agent that
+                answers natural-language queries about on-chain state. PostgreSQL stores
+                chain data; axum serves a REST API; the WASM build target enables
+                browser-based block verification without a server.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 4 E4B</span>
+                <span class="tag db">PostgreSQL</span>
+                <span class="tag">axum · serde</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">WASM</span>
+                <span class="tag">sha2 · ed25519</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">WASM</span><span
+                    class="metric-key">Browser verify</span></div>
+                <div class="metric"><span class="metric-val">NL query</span><span class="metric-key">Chain state</span>
+                </div>
+                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--py)">Multi-Agent</span><span class="metric-key">Architecture</span></div>
-          <div class="metric"><span class="metric-val">DAG</span><span class="metric-key">Workflow</span></div>
-          <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span></div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════ MINOR: GO + MOJO ════════════════════ -->
+      <section class="section">
+        <div class="container">
+
+          <div class="section-header" style="margin-bottom:10px">
+            <span class="lang-badge go">Go</span>
+            <h2 class="section-title">Minor Projects</h2>
+            <div class="section-line"></div>
+          </div>
+          <p class="minor-note">// Golang — concise, concurrent microservices that bridge the AI stack</p>
+          <div class="cards-grid minor" style="margin-bottom:44px">
+
+            <div class="card go">
+              <div class="card-head">
+                <div class="card-icon">🔀</div>
+                <span class="card-status status-stable">Stable</span>
+              </div>
+              <h3 class="card-title">ProxyRouter-Go</h3>
+              <p class="card-desc">
+                Ultra-light Go reverse proxy that load-balances LM Studio, Ollama, and
+                OpenRouter endpoints with per-model auth, rate limiting, and SQLite
+                request logging — a single binary LLM gateway with zero external deps.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">LLM gateway</span>
+                <span class="tag db">SQLite</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">net/http · chi</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--go)">Single binary</span><span
+                    class="metric-key">Deploy</span></div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card go">
+              <div class="card-head">
+                <div class="card-icon">📡</div>
+                <span class="card-status status-wip">WIP</span>
+              </div>
+              <h3 class="card-title">LogStream-AI</h3>
+              <p class="card-desc">
+                Structured log aggregation microservice in Go with a WebSocket endpoint
+                where a Gemma agent delivers real-time anomaly narration for on-call
+                engineers. Log batches persist to PostgreSQL for long-term analysis.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma anomaly</span>
+                <span class="tag db">PostgreSQL</span>
+                <span class="tag git">GitLab</span>
+                <span class="tag">WebSocket · zap</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--go)">WebSocket</span><span
+                    class="metric-key">Live stream</span></div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card go">
+              <div class="card-head">
+                <div class="card-icon">💬</div>
+                <span class="card-status status-wip">WIP</span>
+              </div>
+              <h3 class="card-title">DocuChat-Go</h3>
+              <p class="card-desc">
+                Zero-dependency Go CLI that ingests a directory of PDFs or Markdown files,
+                chunks and embeds them locally, then answers natural-language questions via
+                Gemma 4 E4B through LM Studio — private, offline RAG in a single binary.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 4 E4B</span>
+                <span class="tag gemma">LM Studio</span>
+                <span class="tag db">sqlite-vec</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">RAG · embeddings</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--go)">100% local</span><span
+                    class="metric-key">Inference</span></div>
+                <div class="metric"><span class="metric-val">Single binary</span><span class="metric-key">Deploy</span>
+                </div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="section-header" style="margin-bottom:10px">
+            <span class="lang-badge mojo">Mojo 🔥</span>
+            <h2 class="section-title">Minor Projects</h2>
+            <div class="section-line"></div>
+          </div>
+          <p class="minor-note">// Mojo — C-speed ML kernels where Python becomes the bottleneck</p>
+          <div class="cards-grid minor">
+
+            <div class="card mojo">
+              <div class="card-head">
+                <div class="card-icon">🔥</div>
+                <span class="card-status status-research">Research</span>
+              </div>
+              <h3 class="card-title">TensorFire</h3>
+              <p class="card-desc">
+                Hand-written Mojo SIMD tensor kernels for GGUF dequantisation — bridges
+                into InferCore via C ABI for 2–4× faster token generation on CPU-only
+                systems with AVX-512 support.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">GGUF Gemma kernels</span>
+                <span class="tag">SIMD · AVX-512</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">C ABI bridge</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--mojo)">2–4×</span><span
+                    class="metric-key">CPU speedup</span></div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card mojo">
+              <div class="card-head">
+                <div class="card-icon">⚗️</div>
+                <span class="card-status status-research">Research</span>
+              </div>
+              <h3 class="card-title">FlashOps</h3>
+              <p class="card-desc">
+                Mojo re-implementation of Flash Attention v2 for CPU targets. Reduces
+                peak memory 40% versus naive attention, enabling longer Gemma context
+                windows on 16 GB RAM machines without any GPU.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma long-ctx</span>
+                <span class="tag">Flash Attention 2</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">Benchmark suite</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--mojo)">−40%</span><span
+                    class="metric-key">Peak memory</span></div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card mojo">
+              <div class="card-head">
+                <div class="card-icon">📊</div>
+                <span class="card-status status-wip">WIP</span>
+              </div>
+              <h3 class="card-title">KernelBench-Mojo</h3>
+              <p class="card-desc">
+                Mojo micro-benchmark harness that stress-tests local inference kernels
+                (matmul, softmax, RoPE) against Gemma 4 E4B layer shapes. Generates
+                machine-readable JSON reports for easy CI regression tracking.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 4 E4B</span>
+                <span class="tag gemma">LM Studio</span>
+                <span class="tag">matmul · RoPE</span>
+                <span class="tag git">GitHub</span>
+                <span class="tag">CI JSON reports</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--mojo)">ns-level</span><span
+                    class="metric-key">Timing precision</span></div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════ TOOLCHAIN ════════════════════════════ -->
+      <div class="toolchain">
+        <div class="container">
+          <p class="toolchain-title">// Core toolchain across all projects</p>
+          <div class="tool-row">
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--git)"></span>Git</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:#888"></span>GitHub</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:#fc6d26"></span>GitLab CI</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--db)"></span>PostgreSQL</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:#60a5fa"></span>SQLite</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:#f43f5e"></span>Redis</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:#f59e0b"></span>DuckDB</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--gemma)"></span>LM Studio</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--gemma)"></span>OpenRouter</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:#8b5cf6"></span>Ollama</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:#06b6d4"></span>Docker / Podman</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--py)"></span>uv + ruff</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--rs)"></span>cargo + clippy</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--go)"></span>goreleaser</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--rs)"></span>llama.cpp</div>
+            <div class="tool-pill"><span class="tool-dot" style="background:var(--gemma)"></span>sqlite-vec</div>
+          </div>
         </div>
       </div>
 
-      <div class="card py">
-        <div class="card-head">
-          <div class="card-icon">🔬</div>
-          <span class="card-status status-wip">WIP</span>
+      <!-- ══════════════════ FOOTER ═══════════════════════════════ -->
+      <footer class="page-footer">
+        <div class="container">
+          <div class="footer-inner">
+            <div>
+              <div class="footer-brand">Thomas Cherickal · <span>The Digital Futurist</span></div>
+              <p style="font-family:var(--font-mono);font-size:10px;color:var(--text3);margin-top:5px">
+                thomascherickal.com · Chennai, India 🇮🇳
+              </p>
+            </div>
+            <div class="footer-copy">
+              © 2026 Thomas Cherickal<br>
+              All projects MIT / Apache 2 / GPL-3 unless noted
+            </div>
+          </div>
         </div>
-        <h3 class="card-title">QuantumCircuit-AI</h3>
-        <p class="card-desc">
-          Hybrid quantum-classical ML pipeline bridging Qiskit circuits with
-          Gemma-generated circuit descriptions. SQLite caches transpiled circuits;
-          Redis pub/sub streams partial results to a FastAPI frontend targeting
-          IBMQ simulators and real QPU backends.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">Gemma 3 4B</span>
-          <span class="tag">Qiskit</span>
-          <span class="tag db">SQLite · Redis</span>
-          <span class="tag git">GitHub</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">PennyLane</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--py)">Hybrid</span><span class="metric-key">Quantum + ML</span></div>
-          <div class="metric"><span class="metric-val">Redis</span><span class="metric-key">Streaming</span></div>
-          <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
+      </footer>
 
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════ RUST PROJECTS ═══════════════════════ -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="lang-badge rs">Rust</span>
-      <h2 class="section-title">Major Projects</h2>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="cards-grid">
-
-      <div class="card rs">
-        <div class="card-head">
-          <div class="card-icon">⚡</div>
-          <span class="card-status status-active">Active</span>
-        </div>
-        <h3 class="card-title">InferCore</h3>
-        <p class="card-desc">
-          Minimal Rust inference runtime for GGUF quantised models. Wraps llama.cpp
-          via safe FFI bindings, exposes a streaming gRPC API, and compiles to a
-          single static binary deployable on Raspberry Pi 5 or commodity laptops
-          with as little as 2 GB VRAM.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">GGUF Gemma</span>
-          <span class="tag">llama.cpp FFI</span>
-          <span class="tag">tonic gRPC</span>
-          <span class="tag db">SQLite session log</span>
-          <span class="tag git">GitLab</span>
-          <span class="tag">WASM target</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--rs)">&lt;5 MB</span><span class="metric-key">Binary size</span></div>
-          <div class="metric"><span class="metric-val">gRPC</span><span class="metric-key">API</span></div>
-          <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
-
-      <div class="card rs">
-        <div class="card-head">
-          <div class="card-icon">🔍</div>
-          <span class="card-status status-stable">Stable</span>
-        </div>
-        <h3 class="card-title">GitGuard</h3>
-        <p class="card-desc">
-          CLI security scanner for Git repositories written in Rust. Detects
-          secrets, leaked credentials, and policy violations across the full
-          commit history. Plugs natively into GitHub Actions and GitLab CI;
-          a local Gemma agent via InferCore summarises every finding in plain English.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">Gemma summary</span>
-          <span class="tag git">GitHub Actions · GitLab CI</span>
-          <span class="tag db">SQLite audit log</span>
-          <span class="tag">clap · git2-rs</span>
-          <span class="tag">regex</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--rs)">Full history</span><span class="metric-key">Scan depth</span></div>
-          <div class="metric"><span class="metric-val">CI-native</span><span class="metric-key">Integration</span></div>
-          <div class="metric"><span class="metric-val">GPL-3</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
-
-      <div class="card rs">
-        <div class="card-head">
-          <div class="card-icon">🌐</div>
-          <span class="card-status status-research">Research</span>
-        </div>
-        <h3 class="card-title">BlockLedger-RS</h3>
-        <p class="card-desc">
-          Experimental Rust blockchain ledger with an embedded Gemma agent that
-          answers natural-language queries about on-chain state. PostgreSQL stores
-          chain data; axum serves a REST API; the WASM build target enables
-          browser-based block verification without a server.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">Gemma 4 E4B</span>
-          <span class="tag db">PostgreSQL</span>
-          <span class="tag">axum · serde</span>
-          <span class="tag git">GitHub</span>
-          <span class="tag">WASM</span>
-          <span class="tag">sha2 · ed25519</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--rs)">WASM</span><span class="metric-key">Browser verify</span></div>
-          <div class="metric"><span class="metric-val">NL query</span><span class="metric-key">Chain state</span></div>
-          <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════ MINOR: GO + MOJO ════════════════════ -->
-<section class="section">
-  <div class="container">
-
-    <div class="section-header" style="margin-bottom:10px">
-      <span class="lang-badge go">Go</span>
-      <h2 class="section-title">Minor Projects</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="minor-note">// Golang — concise, concurrent microservices that bridge the AI stack</p>
-    <div class="cards-grid minor" style="margin-bottom:44px">
-
-      <div class="card go">
-        <div class="card-head">
-          <div class="card-icon">🔀</div>
-          <span class="card-status status-stable">Stable</span>
-        </div>
-        <h3 class="card-title">ProxyRouter-Go</h3>
-        <p class="card-desc">
-          Ultra-light Go reverse proxy that load-balances LM Studio, Ollama, and
-          OpenRouter endpoints with per-model auth, rate limiting, and SQLite
-          request logging — a single binary LLM gateway with zero external deps.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">LLM gateway</span>
-          <span class="tag db">SQLite</span>
-          <span class="tag git">GitHub</span>
-          <span class="tag">net/http · chi</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--go)">Single binary</span><span class="metric-key">Deploy</span></div>
-          <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
-
-      <div class="card go">
-        <div class="card-head">
-          <div class="card-icon">📡</div>
-          <span class="card-status status-wip">WIP</span>
-        </div>
-        <h3 class="card-title">LogStream-AI</h3>
-        <p class="card-desc">
-          Structured log aggregation microservice in Go with a WebSocket endpoint
-          where a Gemma agent delivers real-time anomaly narration for on-call
-          engineers. Log batches persist to PostgreSQL for long-term analysis.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">Gemma anomaly</span>
-          <span class="tag db">PostgreSQL</span>
-          <span class="tag git">GitLab</span>
-          <span class="tag">WebSocket · zap</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--go)">WebSocket</span><span class="metric-key">Live stream</span></div>
-          <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="section-header" style="margin-bottom:10px">
-      <span class="lang-badge mojo">Mojo 🔥</span>
-      <h2 class="section-title">Minor Projects</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="minor-note">// Mojo — C-speed ML kernels where Python becomes the bottleneck</p>
-    <div class="cards-grid minor">
-
-      <div class="card mojo">
-        <div class="card-head">
-          <div class="card-icon">🔥</div>
-          <span class="card-status status-research">Research</span>
-        </div>
-        <h3 class="card-title">TensorFire</h3>
-        <p class="card-desc">
-          Hand-written Mojo SIMD tensor kernels for GGUF dequantisation — bridges
-          into InferCore via C ABI for 2–4× faster token generation on CPU-only
-          systems with AVX-512 support.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">GGUF Gemma kernels</span>
-          <span class="tag">SIMD · AVX-512</span>
-          <span class="tag git">GitHub</span>
-          <span class="tag">C ABI bridge</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--mojo)">2–4×</span><span class="metric-key">CPU speedup</span></div>
-          <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
-
-      <div class="card mojo">
-        <div class="card-head">
-          <div class="card-icon">⚗️</div>
-          <span class="card-status status-research">Research</span>
-        </div>
-        <h3 class="card-title">FlashOps</h3>
-        <p class="card-desc">
-          Mojo re-implementation of Flash Attention v2 for CPU targets. Reduces
-          peak memory 40% versus naive attention, enabling longer Gemma context
-          windows on 16 GB RAM machines without any GPU.
-        </p>
-        <div class="tags">
-          <span class="tag gemma">Gemma long-ctx</span>
-          <span class="tag">Flash Attention 2</span>
-          <span class="tag git">GitHub</span>
-          <span class="tag">Benchmark suite</span>
-        </div>
-        <div class="card-metrics">
-          <div class="metric"><span class="metric-val" style="color:var(--mojo)">−40%</span><span class="metric-key">Peak memory</span></div>
-          <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════ TOOLCHAIN ════════════════════════════ -->
-<div class="toolchain">
-  <div class="container">
-    <p class="toolchain-title">// Core toolchain across all projects</p>
-    <div class="tool-row">
-      <div class="tool-pill"><span class="tool-dot" style="background:var(--git)"></span>Git</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:#888"></span>GitHub</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:#fc6d26"></span>GitLab CI</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:var(--db)"></span>PostgreSQL</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:#60a5fa"></span>SQLite</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:#f43f5e"></span>Redis</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:#f59e0b"></span>DuckDB</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:var(--gemma)"></span>LM Studio</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:var(--gemma)"></span>OpenRouter</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:#8b5cf6"></span>Ollama</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:#06b6d4"></span>Docker / Podman</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:var(--py)"></span>uv + ruff</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:var(--rs)"></span>cargo + clippy</div>
-      <div class="tool-pill"><span class="tool-dot" style="background:var(--go)"></span>goreleaser</div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════ FOOTER ═══════════════════════════════ -->
-<footer class="page-footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">Thomas Cherickal · <span>The Digital Futurist</span></div>
-        <p style="font-family:var(--font-mono);font-size:10px;color:var(--text3);margin-top:5px">
-          thomascherickal.com · Chennai, India 🇮🇳
-        </p>
-      </div>
-      <div class="footer-copy">
-        © 2026 Thomas Cherickal<br>
-        All projects MIT / Apache 2 / GPL-3 unless noted
-      </div>
-    </div>
-  </div>
-</footer>
-
-</div><!-- /.page-wrap -->
+    </div><!-- /.page-wrap -->
+  </div><!-- /#tc-projects-root -->
 </body>
+
 </html>

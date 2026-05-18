@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RECRUITED — The Inbound Recruitment Blueprint · Thomas Cherickal</title>
+  <meta name="description"
+    content="Preorder RECRUITED: The Inbound Recruitment Blueprint by Thomas Cherickal. Stop chasing jobs. Make recruiters come to you. 7 parts, 28 chapters, 24 role blueprints, and 12 free Patreon tools." />
+  <meta property="og:title" content="RECRUITED — Make Recruiters Come to You · Thomas Cherickal" />
+  <meta property="og:description"
+    content="Preorder at $10 before launch price of $30. 12 free interactive tools on Patreon unlock immediately." />
+  <meta property="og:url" content="https://thomascherickal.com/recruited" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://thomascherickal.com/recruited" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold: #c9a84c;
+      --gl: #e8c97a;
+      --dk: #0d0d0d;
+      --sf: #161616;
+      --sf2: #1f1f1f;
+      --mu: #888;
+      --tx: #f0ece4;
+      --br: rgba(201, 168, 76, 0.40);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #recruited-page {
+      font-size: 14px;
+      background: var(--dk);
+      color: var(--tx);
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 5em 2em 4em;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--br);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 168, 76, 0.10) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 168, 76, 0.20);
+      border: 1px solid var(--br);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 1.75em;
+    }
+
+    #recruited-page h1 {
+      font-family: 'Times New Roman', serif !important;
+      font-size: clamp(3.5em, 10vw, 7em) !important;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: .75em;
+    }
+
+    #recruited-page h1 span {
+      color: var(--gold);
+    }
+
+    .hook {
+      font-family: 'Times New Roman', serif;
+      font-size: clamp(1em, 2.5vw, 1.35em);
+      color: rgba(240, 236, 228, .55);
+      font-weight: 700;
+      letter-spacing: .01em;
+      margin-bottom: 1.25em;
+      font-style: italic;
+    }
+
+    .sub {
+      font-size: 1.05em;
+      color: var(--mu);
+      max-width: 520px;
+      margin: 0 auto 1.4em;
+      font-weight: 300;
+      line-height: 1.9;
+    }
+
+    .auth {
+      font-size: .78em;
+      color: var(--gl);
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: .6em;
+    }
+
+    .pb {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      margin: 1.5em auto 2em;
+    }
+
+    .plbl {
+      font-size: .65em;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: var(--mu);
+    }
+
+    .price {
+      font-family: 'Times New Roman', serif;
+      font-size: 3em;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .pnote {
+      font-size: .73em;
+      color: var(--gold);
+      letter-spacing: .04em;
+    }
+
+    .ctg {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .bp {
+      background: var(--gold);
+      color: #000;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 500;
+      font-size: .9em;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: .02em;
+      text-decoration: none;
+      display: inline-block;
+      transition: background .2s;
+    }
+
+    .bp:hover {
+      background: var(--gl);
+    }
+
+    .bg {
+      background: transparent;
+      color: var(--tx);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: .9em;
+      padding: 14px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: .02em;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color .2s;
+    }
+
+    .bg:hover {
+      border-color: var(--gold);
+    }
+
+    /* ── STRIP ── */
+    .strip {
+      background: var(--sf);
+      border-top: 1px solid var(--br);
+      border-bottom: 1px solid var(--br);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: center;
+      gap: 2.25em;
+      flex-wrap: wrap;
+    }
+
+    .si {
+      font-size: .68em;
+      color: var(--mu);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .si i {
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    /* ── STATS BAR ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0;
+      max-width: 760px;
+      margin: 0 auto;
+      border: 1px solid var(--br);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 1.25em 1em;
+      text-align: center;
+      background: var(--sf2);
+      border-right: 1px solid var(--br);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.75em;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-lbl {
+      font-size: .68em;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--mu);
+      margin-top: .3em;
+      display: block;
+    }
+
+    /* ── LAYOUT ── */
+    .ctr {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3em 2em;
+    }
+
+    .dv {
+      border: none;
+      border-top: 1px solid var(--br);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .sl {
+      font-size: .67em;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-weight: 500;
+      margin-bottom: .8em;
+    }
+
+    #recruited-page h2 {
+      font-family: 'Times New Roman', serif !important;
+      font-size: 1.9em !important;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.25em;
+      line-height: 1.2;
+    }
+
+    .tx2 {
+      font-size: .93em;
+      color: rgba(240, 236, 228, .72);
+      line-height: 1.9;
+      margin-bottom: 1.1em;
+    }
+
+    /* ── PRODUCT CARDS ── */
+    .pgrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 13px;
+      margin-top: 1.4em;
+    }
+
+    .pc {
+      background: var(--sf2);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      padding: 1.2em 1.35em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pc::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+    }
+
+    .pw {
+      font-size: .62em;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--gold);
+      margin-bottom: .55em;
+    }
+
+    .pt {
+      font-size: .92em;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: .35em;
+      line-height: 1.3;
+    }
+
+    .pd {
+      font-size: .8em;
+      color: var(--mu);
+      line-height: 1.6;
+    }
+
+    .ptg {
+      display: inline-block;
+      background: rgba(201, 168, 76, 0.20);
+      border: 1px solid var(--br);
+      color: var(--gold);
+      font-size: .6em;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 100px;
+      margin-top: .65em;
+    }
+
+    /* ── PART TREE ── */
+    .part {
+      margin-bottom: 1.85em;
+    }
+
+    .phdr {
+      display: flex;
+      align-items: flex-start;
+      gap: 1em;
+      padding: 1.2em 1.4em;
+      background: var(--sf);
+      border: 1px solid var(--br);
+      border-radius: 8px;
+      margin-bottom: .8em;
+    }
+
+    .pnum {
+      font-family: 'Times New Roman', serif;
+      font-size: 2.1em;
+      font-weight: 900;
+      color: rgba(201, 168, 76, 0.90);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 46px;
+    }
+
+    .pb2 {}
+
+    .plb {
+      font-size: .6em;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--gold);
+      margin-bottom: .2em;
+    }
+
+    .ptl {
+      font-size: 1.02em;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .pds {
+      font-size: .78em;
+      color: var(--mu);
+      margin-top: .3em;
+      line-height: 1.55;
+    }
+
+    .tree {
+      margin-left: 1.4em;
+      border-left: 1px solid var(--br);
+      padding-left: 1.15em;
+      display: flex;
+      flex-direction: column;
+      gap: .7em;
+    }
+
+    .ch {
+      background: var(--sf2);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      padding: .95em 1.15em;
+      position: relative;
+    }
+
+    .ch::before {
+      content: '';
+      position: absolute;
+      left: -1.15em;
+      top: 50%;
+      transform: translateY(-50%);
+      width: .95em;
+      height: 1px;
+      background: var(--br);
+    }
+
+    .chi {
+      display: flex;
+      align-items: flex-start;
+      gap: .8em;
+    }
+
+    .cn {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.15em;
+      font-weight: 700;
+      color: rgba(201, 168, 76, 0.90);
+      flex-shrink: 0;
+      width: 30px;
+      line-height: 1.2;
+    }
+
+    .cb {}
+
+    .ctl {
+      font-size: .88em;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: .2em;
+    }
+
+    .cds {
+      font-size: .77em;
+      color: var(--mu);
+      line-height: 1.6;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: .55em;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(201, 168, 76, 0.20);
+      border: 1px solid rgba(201, 168, 76, 0.40);
+      color: var(--gl);
+      font-size: .59em;
+      letter-spacing: .06em;
+      padding: 3px 8px;
+      border-radius: 100px;
+    }
+
+    .pill i {
+      font-size: 10px;
+    }
+
+    /* ── WHO GRID ── */
+    .wgrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 12px;
+      margin-top: 1.35em;
+    }
+
+    .wc {
+      background: var(--sf2);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      padding: 1.1em 1.3em;
+      display: flex;
+      align-items: flex-start;
+      gap: .85em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wc::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+    }
+
+    .wi {
+      color: var(--gold);
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .wb {}
+
+    .wt {
+      font-size: .88em;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: .2em;
+      line-height: 1.35;
+    }
+
+    .wd {
+      font-size: .76em;
+      color: var(--mu);
+      line-height: 1.55;
+    }
+
+    .wtg {
+      display: inline-block;
+      background: rgba(201, 168, 76, 0.20);
+      border: 1px solid var(--br);
+      color: var(--gold);
+      font-size: .58em;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 100px;
+      margin-top: .45em;
+    }
+
+    /* ── FINAL CTA ── */
+    .fcta {
+      background: var(--sf);
+      border: 1px solid var(--br);
+      border-radius: 8px;
+      padding: 2.5em 2em;
+      text-align: center;
+      margin-top: 1.4em;
+    }
+
+    .fcta h3 {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.75em;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: .8em;
+      line-height: 1.2;
+    }
+
+    .fcta>p {
+      font-size: .9em;
+      color: var(--mu);
+      margin: 0 auto 1.75em;
+      max-width: 460px;
+      line-height: 1.8;
+    }
+
+    .pr {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 11px;
+      margin-bottom: 1.65em;
+    }
+
+    .orig {
+      font-size: 1.05em;
+      color: var(--mu);
+      text-decoration: line-through;
+    }
+
+    .sale {
+      font-family: 'Times New Roman', serif;
+      font-size: 2.4em;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .svb {
+      font-size: .7em;
+      background: rgba(201, 168, 76, 0.20);
+      border: 1px solid var(--br);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .cn2 {
+      font-size: .75em;
+      color: var(--mu);
+      margin-top: 1em;
+      line-height: 1.65;
+    }
+
+    .cn2 a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ── APPENDIX ── */
+    .appx-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      margin-top: 1.1em;
+    }
+
+    .appx {
+      background: var(--sf2);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      padding: .9em 1.1em;
+      display: flex;
+      gap: .75em;
+      align-items: flex-start;
+    }
+
+    .appx i {
+      color: var(--gold);
+      font-size: 17px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .appx-t {
+      font-size: .84em;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: .18em;
+    }
+
+    .appx-d {
+      font-size: .74em;
+      color: var(--mu);
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ── */
+    .foot {
+      background: var(--sf);
+      border-top: 1px solid var(--br);
+      padding: 1.75em 2em;
+      text-align: center;
+    }
+
+    .foot p {
+      font-size: .77em;
+      color: var(--mu);
+      line-height: 1.9;
+    }
+
+    .foot a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .foot a:hover {
+      color: var(--gl);
+    }
+
+    @media (max-width: 600px) {
+      #recruited-page h1 {
+        font-size: 3em !important;
+      }
+
+      #recruited-page h2 {
+        font-size: 1.6em !important;
+      }
+
+      .strip {
+        gap: 1.1em;
+      }
+
+      .ctr {
+        padding: 2em 1.25em;
+      }
+
+      .fcta {
+        padding: 1.75em 1.25em;
+      }
+
+      .phdr {
+        flex-direction: column;
+        gap: .5em;
+      }
+
+      .tree {
+        margin-left: .75em;
+        padding-left: .75em;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ── WORDPRESS DIMMING OVERRIDES ─────────────────────────────────────────────
+   Neutralises every common WP theme / page-builder rule that reduces
+   opacity, applies colour overlays, or filters content inside this block.
+   All rules are scoped to #recruited-page so nothing outside is affected.
+────────────────────────────────────────────────────────────────────────────── */
+
+    /* 1. Opacity — themes dim .entry-content children, disabled post states,
+      and "muted" utility classes (Twenty* themes, Astra, GeneratePress, OceanWP) */
+    #recruited-page,
+    #recruited-page *,
+    #recruited-page *::before,
+    #recruited-page *::after {
+      opacity: 1 !important;
+    }
+
+    /* 2. Restore any ::before / ::after overlay that a theme injects over
+      sections (Divi, Elementor, Avada, Flatsome, WPBakery) */
+    #recruited-page>*::before,
+    #recruited-page>*::after {
+      /* Only reset overlays — our own decorative ::before rules already
+     use pointer-events:none and are fully intentional, so we reset
+     background only when the theme injects a dark wash */
+      background-color: transparent !important;
+      /* Do NOT set background:transparent globally — our card gradient
+     top-bars use ::before. Only the direct children of the wrapper
+     (hero, strip, section, footer) can be affected by theme overlays. */
+    }
+
+    /* 3. CSS filter — some themes apply brightness/contrast filters on
+      .wp-block-group, .entry-content, custom HTML blocks */
+    #recruited-page {
+      filter: none !important;
+    }
+
+    #recruited-page * {
+      filter: none !important;
+    }
+
+    /* 4. Backdrop-filter bleed — blur/brightness applied to a parent
+      by plugins (e.g. sticky headers, cookie banners) bleeding in */
+    #recruited-page {
+      backdrop-filter: none !important;
+    }
+
+    /* 5. mix-blend-mode overlays (Elementor Pro, Divi Builder) */
+    #recruited-page,
+    #recruited-page * {
+      mix-blend-mode: normal !important;
+    }
+
+    /* 6. pointer-events disabled — some themes set pointer-events:none
+      on .entry-content children when inside a "preview" container */
+    #recruited-page * {
+      pointer-events: auto !important;
+    }
+
+    /* 7. colour / text colour — intentionally NOT overriding color globally.
+      All gold, muted, and white colors are set per-class throughout this
+      block and must not be touched. WP text-color rules are neutralised
+      by the opacity and visibility overrides above, not by color resets. */
+
+    /* 8. Box-shadow overlay technique — Elementor and Beaver Builder sometimes
+      use inset box-shadow on section wrappers to fake a colour wash */
+    #recruited-page .hero,
+    #recruited-page .strip,
+    #recruited-page section,
+    #recruited-page footer {
+      box-shadow: none;
+    }
+
+    /* (our cards have no box-shadow so this is safe globally) */
+
+    /* 9. Visibility — some WP lazy-load or animation plugins set
+      visibility:hidden until JS fires; force visible inside our block */
+    #recruited-page * {
+      visibility: visible !important;
+    }
+
+    /* 10. WP block editor wraps — .wp-block-html adds padding/margin that
+       can push the block inside a visually dimmed container */
+    .wp-block-html #recruited-page,
+    .wp-block-group #recruited-page {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* ── END WORDPRESS DIMMING OVERRIDES ──────────────────────────────────────── */
+  </style>
+</head>
+
+<body>
+  <div id="recruited-page">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="badge"><i class="ti ti-lock-open" aria-hidden="true"></i>&nbsp; Preorder Open &nbsp;·&nbsp; 12 Weeks
+        of Free Tools</div>
+      <h1>RE<span>CRUITED</span></h1>
+      <p class="hook">The Inbound Recruitment Blueprint: Make Recruiters Come to You</p>
+      <p class="sub">619,000+ tech jobs cut since 2023. 80% of roles never posted publicly. Traditional job hunting is
+        broken. Here is the system that turns that reality into your advantage.</p>
+      <p class="auth">Thomas Cherickal &nbsp;·&nbsp; The Digital Futurist</p>
+      <div class="pb">
+        <span class="plbl">Preorder Price</span>
+        <span class="price">$10</span>
+        <span class="pnote">Price rises to $30 at launch on 15 August 2026</span>
+      </div>
+      <div class="ctg">
+        <a href="#preorder" class="bp">Preorder Now &rarr;</a>
+        <a href="#tools" class="bg">See 12 Free Tools</a>
+      </div>
+    </header>
+
+    <!-- STRIP -->
+    <div class="strip">
+      <span class="si"><i class="ti ti-calendar-event" aria-hidden="true"></i> Ships within 30 days</span>
+      <span class="si"><i class="ti ti-gift" aria-hidden="true"></i> 12 free tools over 12 weeks</span>
+      <span class="si"><i class="ti ti-brand-patreon" aria-hidden="true"></i> Patreon access unlocks instantly</span>
+      <span class="si"><i class="ti ti-star" aria-hidden="true"></i> Name in acknowledgements</span>
+    </div>
+
+    <!-- STATS -->
+    <section class="ctr" style="padding-top:2.25em;padding-bottom:2.25em;">
+      <div class="stats">
+        <div class="stat"><span class="stat-num">334</span><span class="stat-lbl">Pages</span></div>
+        <div class="stat"><span class="stat-num">29</span><span class="stat-lbl">Chapters</span></div>
+        <div class="stat"><span class="stat-num">7</span><span class="stat-lbl">Parts</span></div>
+        <div class="stat"><span class="stat-num">24</span><span class="stat-lbl">Role Blueprints</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-lbl">Appendices</span></div>
+      </div>
+    </section>
+
+    <hr class="dv" />
+
+    <!-- 12 TOOLS -->
+    <section id="tools" class="ctr">
+      <p class="sl">12-Week Patreon Series — Free With Every Preorder</p>
+      <h2>One Powerful Tool. Every Week. For Three Months.</h2>
+      <p class="tx2">Every preorder instantly unlocks your Patreon membership. Over 12 weeks, one fully built
+        interactive tool drops — each drawn directly from a core framework in the book. Start applying the system before
+        your copy even ships.</p>
+      <div class="pgrid">
+
+        <div class="pc">
+          <p class="pw">Week 1 &nbsp;·&nbsp; Available immediately</p>
+          <p class="pt">Inbound Readiness Scorer</p>
+          <p class="pd">Score yourself across the eight inbound recruitment pillars from Chapter 1 — personal brand,
+            LinkedIn presence, public proof, AI fluency, portfolio, content consistency, networking, and hidden-market
+            access. Get a composite readiness grade with priority actions.</p>
+          <span class="ptg">Self-Assessment Tool</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 2 &nbsp;·&nbsp; Day 8</p>
+          <p class="pt">Hidden Job Market Navigator</p>
+          <p class="pd">A structured research dashboard based on Chapter 2's referral economy framework — map target
+            companies, identify warm-path contacts, track relationship depth, and surface the roles that never reach a
+            public job board.</p>
+          <span class="ptg">Research Dashboard</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 3 &nbsp;·&nbsp; Day 15</p>
+          <p class="pt">LinkedIn Profile Audit &amp; Optimizer</p>
+          <p class="pd">Walk through every LinkedIn section using the exact profile optimization checklist from Chapter
+            9 — headline formula scoring, About section grader, Featured section checker — with a live completeness and
+            recruiter-magnet score.</p>
+          <span class="ptg">Profile Audit Tool</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 4 &nbsp;·&nbsp; Day 22</p>
+          <p class="pt">Personal Brand Niche Finder</p>
+          <p class="pd">Apply the three-circle Venn diagram method from Chapter 9 — what you know deeply, what the
+            market pays for, what you can teach publicly. Identify your positioning intersection and generate a
+            positioning statement from the template in the book.</p>
+          <span class="ptg">Brand Positioning Tool</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 5 &nbsp;·&nbsp; Day 29</p>
+          <p class="pt">Skills Gap Analyser</p>
+          <p class="pd">Replicate the NotebookLM gap-analysis workflow from Chapter 5 in interactive form — input your
+            background and target role requirements, then see a visual breakdown of missing skills, ranked by frequency,
+            with a prioritised 30-day learning path.</p>
+          <span class="ptg">Gap Analysis Tool</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 6 &nbsp;·&nbsp; Day 36</p>
+          <p class="pt">Salary Intelligence by Role</p>
+          <p class="pd">Select from the 24 roles profiled in Parts 4 and 5 — AI/ML Engineer, Content Writer, AI
+            Consultant, and more — and see salary band data, seniority breakdowns, and negotiation anchor points drawn
+            directly from the role blueprint chapters.</p>
+          <span class="ptg">Salary Intelligence Tool</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 7 &nbsp;·&nbsp; Day 43</p>
+          <p class="pt">6-Month Roadmap Tracker</p>
+          <p class="pd">An interactive week-by-week execution planner built on Chapter 21's 6-Month Roadmap — track your
+            brand audit, profile optimisation, publishing schedule, first GitHub repository, networking milestones, and
+            offer conversion activities in one visual dashboard.</p>
+          <span class="ptg">Milestone Tracker</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 8 &nbsp;·&nbsp; Day 50</p>
+          <p class="pt">Job Application Pipeline (Kanban)</p>
+          <p class="pd">A fully functional Kanban board — Target, Applied, Interview, Offer, Archived — with per-card
+            notes, follow-up dates, contact names, and company research fields. Designed around the application-engine
+            discipline framework in Chapter 21.</p>
+          <span class="ptg">Kanban Tracker</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 9 &nbsp;·&nbsp; Day 57</p>
+          <p class="pt">Network Depth Map</p>
+          <p class="pd">Visualise your professional network using the concentric-circle model from Chapter 24 — inner
+            circle (5-10), middle circle (20-30), and outer circle — with relationship strength indicators, last-contact
+            tracking, and value-exchange notes per contact.</p>
+          <span class="ptg">Network Visualiser</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 10 &nbsp;·&nbsp; Day 64</p>
+          <p class="pt">Role Blueprint Deep-Dive</p>
+          <p class="pd">An interactive selector across all 24 roles from Parts 4 and 5 — each showing where to post,
+            what public proof to build, which AI tools to master, and the salary range — helping you identify which
+            blueprint matches your background and target the right market.</p>
+          <span class="ptg">Role Selector Tool</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 11 &nbsp;·&nbsp; Day 71</p>
+          <p class="pt">AI Tool Stack Selector</p>
+          <p class="pd">Based on Part 2 (Google Antigravity, NotebookLM, Perplexity.ai, Git &amp; GitHub, Google AI
+            Studio) — a decision-tree tool that matches your current role, goal, and task type to the right AI tool and
+            workflow from the book, with step-by-step instructions.</p>
+          <span class="ptg">Workflow Selector</span>
+        </div>
+
+        <div class="pc">
+          <p class="pw">Week 12 &nbsp;·&nbsp; Day 78</p>
+          <p class="pt">Career Compounding Roadmap</p>
+          <p class="pd">A visual 12-month interactive timeline built on the book's final frameworks — plot your brand
+            milestones, content commitments, learning checkpoints, networking targets, and income goals. See the
+            compound curve of Month 1 through Month 12 in real time.</p>
+          <span class="ptg">Career Timeline</span>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="dv" />
+
+    <!-- BOOK OUTLINE -->
+    <section id="chapters" class="ctr">
+      <p class="sl">Inside the Book</p>
+      <h2>What RECRUITED Covers</h2>
+      <p class="tx2">7 parts. 29 chapters. 24 role blueprints. 5 appendices. Every chapter delivers a framework you can
+        apply the same day — no theory without practice, no practice without proof.</p>
+
+      <!-- PART 1 -->
+      <div class="part">
+        <div class="phdr">
+          <div class="pnum">1</div>
+          <div class="pb2">
+            <p class="plb">Part One &nbsp;·&nbsp; Pages 1–31</p>
+            <p class="ptl">The New Reality for Landing a Job</p>
+            <p class="pds">619,000+ tech layoffs since 2023. Junior roles going extinct. 80% of jobs never posted. This
+              part names the truth — and shows why that truth is your greatest opportunity.</p>
+          </div>
+        </div>
+        <div class="tree">
+          <div class="ch">
+            <div class="chi"><span class="cn">01</span>
+              <div class="cb">
+                <p class="ctl">The Great Disruption <span style="font-size:.65em;color:var(--mu);font-weight:400;">·
+                    Pages 2–9</span></p>
+                <p class="cds">619,000+ tech jobs cut since 2023. Q1 2026 alone saw 81,747 layoffs driven by AI
+                  restructuring at Oracle, Amazon, Meta, and Microsoft. AI-first is the new operating philosophy — and
+                  those who adapt are thriving while those who don't are at risk.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-bolt" aria-hidden="true"></i>619K+ Tech Layoffs</span>
+                  <span class="pill"><i class="ti ti-robot" aria-hidden="true"></i>AI-First Operating Model</span>
+                  <span class="pill"><i class="ti ti-trending-down" aria-hidden="true"></i>End of Entry-Level
+                    Roles</span>
+                  <span class="pill"><i class="ti ti-eye" aria-hidden="true"></i>Inbound Recruitment Defined</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">02</span>
+              <div class="cb">
+                <p class="ctl">The Hidden Job Market <span style="font-size:.65em;color:var(--mu);font-weight:400;">·
+                    Pages 10–20</span></p>
+                <p class="cds">80% of jobs are filled through networks before ever being posted. 25–30% of visible
+                  listings are ghost jobs with no real hiring intent. The five-step LinkedIn networking sequence that
+                  gets you hired before the posting appears — no cold DMs, no begging for referrals.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-eye-off" aria-hidden="true"></i>80% Never Posted</span>
+                  <span class="pill"><i class="ti ti-ghost" aria-hidden="true"></i>Ghost Job Crisis</span>
+                  <span class="pill"><i class="ti ti-arrows-exchange" aria-hidden="true"></i>The Referral Economy</span>
+                  <span class="pill"><i class="ti ti-user-check" aria-hidden="true"></i>5-Step Network Sequence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">03</span>
+              <div class="cb">
+                <p class="ctl">AI — Threat and Opportunity <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 21–31</span></p>
+                <p class="cds">No computer-based role is safe from AI — not senior developers, cloud architects, or ML
+                  engineers. But demand for AI tools experts has never been higher. The Learner's Mindset framework and
+                  seven commitments required to reach the top 1%.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-brain" aria-hidden="true"></i>Learner's Mindset</span>
+                  <span class="pill"><i class="ti ti-cpu" aria-hidden="true"></i>AI Tool Mastery Path</span>
+                  <span class="pill"><i class="ti ti-trophy" aria-hidden="true"></i>The 1% Advantage</span>
+                  <span class="pill"><i class="ti ti-shield" aria-hidden="true"></i>Future-Proof Strategy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART 2 -->
+      <div class="part">
+        <div class="phdr">
+          <div class="pnum">2</div>
+          <div class="pb2">
+            <p class="plb">Part Two &nbsp;·&nbsp; Pages 32–110</p>
+            <p class="ptl">AI Tools You Need to Know</p>
+            <p class="pds">The exact tool stack that replaces an entire career coaching team. The best results are
+              obtained with a $20 USD subscription for Claude Pro and another $20 USD subscription to Google AI Pro.
+              Google Antigravity, NotebookLM, Perplexity.ai, Git &amp; GitHub, Google AI Studio, and Claude Pro.</p>
+          </div>
+        </div>
+        <div class="tree">
+          <div class="ch">
+            <div class="chi"><span class="cn">04</span>
+              <div class="cb">
+                <p class="ctl">Google Antigravity <span style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages
+                    33–45</span></p>
+                <p class="cds">Google's autonomous AI agent that browses the web, executes code, manages files, and
+                  builds portfolio projects end-to-end. Pair it with Claude Pro for the most powerful combination:
+                  Antigravity's autonomous web browsing and code execution combined with Claude's deep reasoning — the
+                  two subscriptions together ($40/month) replace an entire career coaching team.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-robot" aria-hidden="true"></i>Autonomous Agent</span>
+                  <span class="pill"><i class="ti ti-crown" aria-hidden="true"></i>Claude Pro Pairing</span>
+                  <span class="pill"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Portfolio Builder</span>
+                  <span class="pill"><i class="ti ti-world" aria-hidden="true"></i>Live Web Research</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">05</span>
+              <div class="cb">
+                <p class="ctl">NotebookLM <span style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages
+                    46–67</span></p>
+                <p class="cds">Google's AI notebook that answers only from your uploaded sources — zero hallucination.
+                  Upload your resume + 10 job descriptions and ask "what's missing?" Get a personalized gap analysis
+                  grounded entirely in your actual target market. Ten career-transforming workflows included.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-lock" aria-hidden="true"></i>Zero Hallucination</span>
+                  <span class="pill"><i class="ti ti-file-analytics" aria-hidden="true"></i>Gap Analysis
+                    Workflows</span>
+                  <span class="pill"><i class="ti ti-headphones" aria-hidden="true"></i>Audio Overviews</span>
+                  <span class="pill"><i class="ti ti-book" aria-hidden="true"></i>Interview Deep Prep</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">06</span>
+              <div class="cb">
+                <p class="ctl">Perplexity.ai and Git &amp; GitHub <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 68–81</span></p>
+                <p class="cds">Perplexity finds what others can't — real-time, citation-backed intelligence on salary
+                  benchmarks, company news, and hiring patterns, updated daily. GitHub is your public proof system: the
+                  green contribution graph that proves consistent effort no certificate can replicate.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-clock" aria-hidden="true"></i>Real-Time Intelligence</span>
+                  <span class="pill"><i class="ti ti-certificate" aria-hidden="true"></i>Public Proof System</span>
+                  <span class="pill"><i class="ti ti-source-code" aria-hidden="true"></i>Git Career Workflows</span>
+                  <span class="pill"><i class="ti ti-link" aria-hidden="true"></i>Citation-Backed Research</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">07</span>
+              <div class="cb">
+                <p class="ctl">Google AI Studio <span style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages
+                    82–96</span></p>
+                <p class="cds">Gemini's professional platform with a 2-million-token context window — feed 50 job
+                  descriptions, your entire career history, and a competitor's full content archive in one session. Four
+                  career workflows: persona-based coaching, bulk content engine, deep research, and interview
+                  simulation.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-maximize" aria-hidden="true"></i>2M-Token Context</span>
+                  <span class="pill"><i class="ti ti-stack" aria-hidden="true"></i>Bulk Content Engine</span>
+                  <span class="pill"><i class="ti ti-microphone" aria-hidden="true"></i>Interview Simulation</span>
+                  <span class="pill"><i class="ti ti-settings" aria-hidden="true"></i>Persona-Based Coaching</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">08</span>
+              <div class="cb">
+                <p class="ctl">Claude Pro <span style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages
+                    97–110</span></p>
+                <p class="cds">Claude Pro ($20/month) is the AI tool that makes every other tool in this stack
+                  dramatically more powerful. Its 200K-token context window lets you feed an entire career history, 30
+                  job descriptions, and a competitor&#8217;s full content archive into a single session. Pair it with
+                  Google AI Pro ($20/month) for the most powerful career AI stack in existence.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-writing" aria-hidden="true"></i>200K-Token Context</span>
+                  <span class="pill"><i class="ti ti-brain" aria-hidden="true"></i>Extended Thinking Mode</span>
+                  <span class="pill"><i class="ti ti-file-text" aria-hidden="true"></i>7 Career Workflows</span>
+                  <span class="pill"><i class="ti ti-coin" aria-hidden="true"></i>$20/Month · Best-ROI Sub</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART 3 -->
+      <div class="part">
+        <div class="phdr">
+          <div class="pnum">3</div>
+          <div class="pb2">
+            <p class="plb">Part Three &nbsp;·&nbsp; Pages 111–140</p>
+            <p class="ptl">Building Your Foundation</p>
+            <p class="pds">Personal brand, LinkedIn mastery, and AI skill architecture — the three pillars that make
+              recruiters find you instead of you finding them.</p>
+          </div>
+        </div>
+        <div class="tree">
+          <div class="ch">
+            <div class="chi"><span class="cn">09</span>
+              <div class="cb">
+                <p class="ctl">Personal Brand Architecture <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 111–118</span></p>
+                <p class="cds">The three-circle Venn diagram: what you know deeply, what the market pays for, what you
+                  can teach publicly. Your niche lives at their intersection. The 30-day brand audit checklist,
+                  positioning statement template, and the brand-building timeline reality — Month 1 nobody sees you,
+                  Month 12 recruiters find you.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-circles-relation" aria-hidden="true"></i>Three-Circle Venn
+                    Method</span>
+                  <span class="pill"><i class="ti ti-target" aria-hidden="true"></i>Niche Positioning</span>
+                  <span class="pill"><i class="ti ti-clipboard-check" aria-hidden="true"></i>30-Day Brand Audit</span>
+                  <span class="pill"><i class="ti ti-align-center" aria-hidden="true"></i>Positioning Statement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">10</span>
+              <div class="cb">
+                <p class="ctl">LinkedIn Mastery <span style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages
+                    105–112</span></p>
+                <p class="cds">LinkedIn is not a job board — it is the world's largest professional trust-building
+                  platform. The headline formula, About section framework, Featured section strategy, and the algorithm
+                  decoded: posts that get comments within 90 minutes are promoted exponentially. Posting 3× per week for
+                  6 months produced 1,200+ profile views/month and 2 formal job offers — without a single application
+                  sent.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-antenna" aria-hidden="true"></i>Inbound Engine</span>
+                  <span class="pill"><i class="ti ti-pencil" aria-hidden="true"></i>Headline Formula</span>
+                  <span class="pill"><i class="ti ti-algorithm" aria-hidden="true"></i>Algorithm Decoded</span>
+                  <span class="pill"><i class="ti ti-chart-line" aria-hidden="true"></i>Recruiter Magnet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">11</span>
+              <div class="cb">
+                <p class="ctl">Essential AI Skills <span style="font-size:.65em;color:var(--mu);font-weight:400;">·
+                    Pages 127–133</span></p>
+                <p class="cds">The minimum AI proficiency every professional needs in 2026 — across ChatGPT, Gemini,
+                  Claude, Grok, NotebookLM, and Google AI Studio. The daily workflow that keeps you permanently ahead of
+                  the tools curve. The best results are obtained with a $20 USD subscription for Claude Pro and another
+                  $20 USD subscription to Google AI Pro — together, the highest-ROI $40 a professional can spend.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-tool" aria-hidden="true"></i>Core Tool Fluency</span>
+                  <span class="pill"><i class="ti ti-repeat" aria-hidden="true"></i>Daily Workflow</span>
+                  <span class="pill"><i class="ti ti-clock" aria-hidden="true"></i>30-Minute Practice</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">12</span>
+              <div class="cb">
+                <p class="ctl">Advanced AI Applications <span style="font-size:.65em;color:var(--mu);font-weight:400;">·
+                    Pages 134–140</span></p>
+                <p class="cds">Moving from AI consumer to AI-native professional — agent orchestration, automation
+                  pipelines, and the advanced use cases that separate the top 1% from everyone else. How to build
+                  expertise the market cannot yet find elsewhere.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-hierarchy" aria-hidden="true"></i>Agent Orchestration</span>
+                  <span class="pill"><i class="ti ti-plug" aria-hidden="true"></i>Automation Pipelines</span>
+                  <span class="pill"><i class="ti ti-sparkles" aria-hidden="true"></i>AI-Native Work Patterns</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART 4 -->
+      <div class="part">
+        <div class="phdr">
+          <div class="pnum">4</div>
+          <div class="pb2">
+            <p class="plb">Part Four &nbsp;·&nbsp; Pages 141–170</p>
+            <p class="ptl">Role Blueprints — Technology &amp; Engineering</p>
+            <p class="pds">12 detailed role blueprints for tech and engineering professionals — where to post, what
+              proof to build, which AI tools to master, and the salary range waiting on the other side.</p>
+          </div>
+        </div>
+        <div class="tree">
+          <div class="ch">
+            <div class="chi"><span class="cn">13</span>
+              <div class="cb">
+                <p class="ctl">Top-Paying Roles — AI/ML, Cloud &amp; Cybersecurity <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 141–148</span></p>
+                <p class="cds">AI/ML Engineer ($120K–$300K+), Cloud Architect ($130K–$280K+), Cybersecurity Engineer
+                  ($110K–$250K+) — exact proof portfolios, LinkedIn positioning, and AI tool workflows that make
+                  recruiters reach out before a role is even posted.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-coin" aria-hidden="true"></i>$120K–$300K+</span>
+                  <span class="pill"><i class="ti ti-certificate" aria-hidden="true"></i>Proof Portfolio
+                    Templates</span>
+                  <span class="pill"><i class="ti ti-shield-lock" aria-hidden="true"></i>Security + Cloud
+                    Branding</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">14</span>
+              <div class="cb">
+                <p class="ctl">Top-Paying Roles — Data Science, DevOps &amp; Full-Stack <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 149–155</span></p>
+                <p class="cds">Data Scientist ($100K–$220K+), DevOps Engineer ($95K–$200K+), Full-Stack Developer
+                  ($85K–$180K+) — GitHub portfolio standards, technical blog strategy, and the open-source contribution
+                  paths that multiply recruiter credibility.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-coin" aria-hidden="true"></i>$85K–$220K+</span>
+                  <span class="pill"><i class="ti ti-brand-github" aria-hidden="true"></i>GitHub Portfolio
+                    Standard</span>
+                  <span class="pill"><i class="ti ti-git-merge" aria-hidden="true"></i>Open-Source Contributions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">15</span>
+              <div class="cb">
+                <p class="ctl">AI Mastery — Product, Solutions &amp; Data Engineering <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 156–163</span></p>
+                <p class="cds">Product Manager ($110K–$220K+), Solutions Architect ($130K–$260K+), Data Engineer
+                  ($100K–$190K+) — the intersection of technical depth and stakeholder communication that makes these
+                  roles AI-resilient and high-demand in 2026.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-coin" aria-hidden="true"></i>$100K–$260K+</span>
+                  <span class="pill"><i class="ti ti-users" aria-hidden="true"></i>Stakeholder Positioning</span>
+                  <span class="pill"><i class="ti ti-route" aria-hidden="true"></i>AI Adoption Roadmaps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">16</span>
+              <div class="cb">
+                <p class="ctl">AI-Native Roles — UX/UI, Engineering Management &amp; Prompt Engineering <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 164–170</span></p>
+                <p class="cds">UX/UI Designer ($70K–$160K+), Engineering Manager ($140K–$280K+), Prompt Engineer
+                  ($80K–$200K+) — the newest category of AI-native roles with the highest growth trajectories and the
+                  clearest path to inbound recruiter interest.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-coin" aria-hidden="true"></i>$70K–$280K+</span>
+                  <span class="pill"><i class="ti ti-sparkles" aria-hidden="true"></i>AI-Native Positioning</span>
+                  <span class="pill"><i class="ti ti-palette" aria-hidden="true"></i>Creative + Technical Proof</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART 5 -->
+      <div class="part">
+        <div class="phdr">
+          <div class="pnum">5</div>
+          <div class="pb2">
+            <p class="plb">Part Five &nbsp;·&nbsp; Pages 171–200</p>
+            <p class="ptl">Role Blueprints — Writers, Creatives &amp; Ops</p>
+            <p class="pds">12 role blueprints for writers, creative professionals, and operations roles — proving that
+              inbound recruitment works for every computer-based career, not just engineering.</p>
+          </div>
+        </div>
+        <div class="tree">
+          <div class="ch">
+            <div class="chi"><span class="cn">17</span>
+              <div class="cb">
+                <p class="ctl">The Writer — Content, Technical &amp; Book Author <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 171–178</span></p>
+                <p class="cds">Content Writer ($40K–$120K+), Technical Writer ($65K–$140K+), Book Author ($variable) —
+                  how to build an audience before approaching a publisher, use NotebookLM for research synthesis, and
+                  create public proof through published work that recruiters can verify before any interview.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-writing" aria-hidden="true"></i>Publication as Proof</span>
+                  <span class="pill"><i class="ti ti-users" aria-hidden="true"></i>Audience-First Publishing</span>
+                  <span class="pill"><i class="ti ti-mail" aria-hidden="true"></i>Newsletter as Portfolio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">18</span>
+              <div class="cb">
+                <p class="ctl">The AI Creative — Graphic Designer, Artist &amp; Musician <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 179–186</span></p>
+                <p class="cds">AI Graphic Designer ($55K–$150K), AI Artist ($40K–$200K+), AI Musician ($35K–$180K+) —
+                  the creative economy is being rebuilt around AI-native creators. Original vision plus AI production
+                  equals dominance. Portfolio platforms, workflow documentation, and commercial proof strategies.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-palette" aria-hidden="true"></i>AI Creative Stack</span>
+                  <span class="pill"><i class="ti ti-movie" aria-hidden="true"></i>Portfolio Documentation</span>
+                  <span class="pill"><i class="ti ti-music" aria-hidden="true"></i>Sync Licensing Proof</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">19</span>
+              <div class="cb">
+                <p class="ctl">The AI Professional — Project Management, Sales &amp; Marketing <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 187–193</span></p>
+                <p class="cds">AI Project Manager ($95K–$160K), AI Sales Professional ($80K–$300K+), AI Marketing
+                  Specialist ($70K–$150K) — established roles supercharged by AI. How to document your AI efficiency
+                  gains as case studies that prove ROI before an interview starts.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-chart-bar" aria-hidden="true"></i>ROI Case Studies</span>
+                  <span class="pill"><i class="ti ti-speakerphone" aria-hidden="true"></i>AI Sales Stack</span>
+                  <span class="pill"><i class="ti ti-trending-up" aria-hidden="true"></i>Efficiency Proof</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">20</span>
+              <div class="cb">
+                <p class="ctl">AI Strategy &amp; Ops — Operations, Customer Success &amp; Consultant <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 194–200</span></p>
+                <p class="cds">Operations Manager ($90K–$170K), Customer Success Manager ($80K–$150K), AI Consultant
+                  ($150K–$400K+) — the highest tier of AI implementation. Designing the systems others use to work.
+                  Before-and-after process maps and AI implementation frameworks as the ultimate proof of expertise.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-coin" aria-hidden="true"></i>Up to $400K+</span>
+                  <span class="pill"><i class="ti ti-sitemap" aria-hidden="true"></i>AI Implementation Framework</span>
+                  <span class="pill"><i class="ti ti-arrows-diff" aria-hidden="true"></i>Before &amp; After
+                    Portfolios</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART 6 -->
+      <div class="part">
+        <div class="phdr">
+          <div class="pnum">6</div>
+          <div class="pb2">
+            <p class="plb">Part Six &nbsp;·&nbsp; Pages 201–234</p>
+            <p class="ptl">Execution</p>
+            <p class="pds">The exact week-by-week plan for the 180 days that separate invisible from sought-after. No
+              theory without a same-day action step.</p>
+          </div>
+        </div>
+        <div class="tree">
+          <div class="ch">
+            <div class="chi"><span class="cn">21</span>
+              <div class="cb">
+                <p class="ctl">The 6-Month Roadmap <span style="font-size:.65em;color:var(--mu);font-weight:400;">·
+                    Pages 201–211</span></p>
+                <p class="cds">Month 1-2: brand audit and foundation. Month 3-4: first recruiter signals and strategic
+                  networking. Month 5-6: scale what works and convert interest to offers. The author's personal
+                  timeline: Month 3 first recruiter interest → Month 6 three simultaneous offers, negotiated from choice
+                  not desperation.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-calendar" aria-hidden="true"></i>Week-by-Week Plan</span>
+                  <span class="pill"><i class="ti ti-chart-dots" aria-hidden="true"></i>Brand Compounding Curve</span>
+                  <span class="pill"><i class="ti ti-handshake" aria-hidden="true"></i>Offer Conversion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">22</span>
+              <div class="cb">
+                <p class="ctl">Daily LinkedIn Practice <span style="font-size:.65em;color:var(--mu);font-weight:400;">·
+                    Pages 212–218</span></p>
+                <p class="cds">1 post per week produces an inconsistent trickle the algorithm cannot promote. 3 posts
+                  per week for 26 weeks produces 78 pieces of content — a body of work that signals commitment to every
+                  recruiter who visits. The exact daily 30-minute LinkedIn practice and content workflow.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-repeat" aria-hidden="true"></i>3× Per Week</span>
+                  <span class="pill"><i class="ti ti-clock" aria-hidden="true"></i>30-Minute Daily Practice</span>
+                  <span class="pill"><i class="ti ti-trending-up" aria-hidden="true"></i>Algorithm Momentum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">23</span>
+              <div class="cb">
+                <p class="ctl">Technical Skill Development <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 219–224</span></p>
+                <p class="cds">The T-shaped professional model: one skill deep enough to be world-class, four to six
+                  adjacent skills at working proficiency. LLMs as interactive tutors — the pedagogical model that
+                  outperforms passive courses. The GitHub portfolio standard every recruiter-facing profile must meet.
+                </p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-letter-t" aria-hidden="true"></i>T-Shaped Expertise</span>
+                  <span class="pill"><i class="ti ti-brand-github" aria-hidden="true"></i>GitHub Portfolio
+                    Standard</span>
+                  <span class="pill"><i class="ti ti-school" aria-hidden="true"></i>LLM-Powered Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">24</span>
+              <div class="cb">
+                <p class="ctl">Authentic Networking <span style="font-size:.65em;color:var(--mu);font-weight:400;">·
+                    Pages 225–230</span></p>
+                <p class="cds">Networking is not a job-hunting tactic — it is a long-term professional habit that makes
+                  job hunting eventually unnecessary. The concentric-circle model: inner circle (5-10), middle circle
+                  (20-30), outer circle (100-200). Opportunities come from the inner circle. The value exchange approach
+                  that eliminates every networking awkwardness.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-arrows-exchange" aria-hidden="true"></i>Value Exchange Model</span>
+                  <span class="pill"><i class="ti ti-circles-relation" aria-hidden="true"></i>Concentric-Circle
+                    Depth</span>
+                  <span class="pill"><i class="ti ti-user-plus" aria-hidden="true"></i>Referral Activation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">25</span>
+              <div class="cb">
+                <p class="ctl">Conclusion: The Choice Is Yours <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 231–234</span></p>
+                <p class="cds">Five non-negotiable truths. The two paths — those who act today versus those who wait six
+                  months. The blueprint is here. The best results are obtained with a $20 USD subscription for Claude
+                  Pro and another $20 USD subscription to Google AI Pro. The only variable is you. "Your future
+                  recruiter is
+                  watching for your content — give them something to find."</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-flame" aria-hidden="true"></i>Five Non-Negotiable Truths</span>
+                  <span class="pill"><i class="ti ti-player-play" aria-hidden="true"></i>Start Today</span>
+                  <span class="pill"><i class="ti ti-infinity" aria-hidden="true"></i>The Blueprint</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART 7 -->
+      <div class="part">
+        <div class="phdr">
+          <div class="pnum">7</div>
+          <div class="pb2">
+            <p class="plb">Part Seven &nbsp;·&nbsp; Pages 267–306</p>
+            <p class="ptl">AI Agent Orchestrators</p>
+            <p class="pds">The frontier of career advantage — autonomous AI agents that work independently, learn
+              continuously, and handle multi-step professional tasks while you focus on strategy.</p>
+          </div>
+        </div>
+        <div class="tree">
+          <div class="ch">
+            <div class="chi"><span class="cn">26</span>
+              <div class="cb">
+                <p class="ctl">OpenClaw — The Local-First Autonomous Agent Runtime <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 267–276</span></p>
+                <p class="cds">A local-first autonomous agent runtime that handles complex multi-step tasks without
+                  cloud dependency. How to deploy OpenClaw as your personal career intelligence agent — researching
+                  companies, monitoring job signals, and preparing dossiers without manual effort.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-home" aria-hidden="true"></i>Local-First Agent</span>
+                  <span class="pill"><i class="ti ti-lock" aria-hidden="true"></i>Privacy-First Runtime</span>
+                  <span class="pill"><i class="ti ti-refresh" aria-hidden="true"></i>Autonomous Workflows</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">27</span>
+              <div class="cb">
+                <p class="ctl">Hermes Agent — The Self-Learning Autonomous Agent <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 277–286</span></p>
+                <p class="cds">An agent that learns from every interaction and retains memory across sessions — building
+                  a persistent professional intelligence system tuned to your career context, your target companies, and
+                  your niche expertise over time.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-reload" aria-hidden="true"></i>Self-Learning AI</span>
+                  <span class="pill"><i class="ti ti-database" aria-hidden="true"></i>Persistent Memory</span>
+                  <span class="pill"><i class="ti ti-user-circle" aria-hidden="true"></i>Career Intelligence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">28</span>
+              <div class="cb">
+                <p class="ctl">OpenFang — The Enterprise Multi-Agent Orchestration Framework <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 287–296</span></p>
+                <p class="cds">Enterprise-grade multi-agent coordination — deploy specialist agents working in parallel
+                  on research, content, outreach, and portfolio tasks simultaneously. The professional who masters
+                  multi-agent orchestration operates at a scale no solo practitioner using manual tools can match.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-topology-star" aria-hidden="true"></i>Multi-Agent Framework</span>
+                  <span class="pill"><i class="ti ti-building" aria-hidden="true"></i>Enterprise Scale</span>
+                  <span class="pill"><i class="ti ti-arrow-fork" aria-hidden="true"></i>Parallel Orchestration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ch">
+            <div class="chi"><span class="cn">29</span>
+              <div class="cb">
+                <p class="ctl">How AI Agent Workers Change Work for Everyone <span
+                    style="font-size:.65em;color:var(--mu);font-weight:400;">· Pages 297–306</span></p>
+                <p class="cds">The macro-level transformation already underway — how agent adoption changes what
+                  employers need, what individuals can deliver, and what competitive advantage looks like over the next
+                  three to five years. How to position yourself as the professional who understands and deploys this
+                  transformation.</p>
+                <div class="pills">
+                  <span class="pill"><i class="ti ti-world" aria-hidden="true"></i>Future of Work</span>
+                  <span class="pill"><i class="ti ti-rocket" aria-hidden="true"></i>Competitive Positioning</span>
+                  <span class="pill"><i class="ti ti-trending-up" aria-hidden="true"></i>Agent Adoption Curve</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APPENDICES -->
+      <div style="margin-top:.5em;">
+        <p class="sl">Appendices &nbsp;·&nbsp; Pages 235–324</p>
+        <div class="appx-grid">
+          <div class="appx"><i class="ti ti-list-check" aria-hidden="true"></i>
+            <div>
+              <p class="appx-t">Appendix A — Quick-Start Checklist &amp; Resource Guide</p>
+              <p class="appx-d">The complete day-one action list — every tool, every account, every first step in one
+                place.</p>
+            </div>
+          </div>
+          <div class="appx"><i class="ti ti-tool" aria-hidden="true"></i>
+            <div>
+              <p class="appx-t">Appendix B — AI Tools Career Acceleration Toolkit</p>
+              <p class="appx-d">Deep-dive reference for Perplexity, NotebookLM, Google AI Studio, Claude, Antigravity,
+                Git, GitHub &amp;
+                GitHub — with career-specific workflows for each.</p>
+            </div>
+          </div>
+          <div class="appx"><i class="ti ti-file-text" aria-hidden="true"></i>
+            <div>
+              <p class="appx-t">Appendix C — AI Tools Cheat Sheets</p>
+              <p class="appx-d">Quick-reference cards for every tool. Print them, bookmark them, use them every day
+                until the commands become second nature.</p>
+            </div>
+          </div>
+          <div class="appx"><i class="ti ti-bug" aria-hidden="true"></i>
+            <div>
+              <p class="appx-t">Appendix D — Common Errors &amp; AI-Assisted Fixes</p>
+              <p class="appx-d">The most frequent tool errors — Perplexity, NotebookLM, Git &amp; GitHub — with exact
+                fixes and AI-assisted recovery prompts for each.</p>
+            </div>
+          </div>
+          <div class="appx"><i class="ti ti-server" aria-hidden="true"></i>
+            <div>
+              <p class="appx-t">Appendix E — Running LLMs Locally: Your Private AI Infrastructure</p>
+              <p class="appx-d">Ollama, LM Studio, Open WebUI, model selection by VRAM, and the complete local AI stack
+                for career professionals. Local models cost nothing to run. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <hr class="dv" />
+
+    <!-- WHO THIS IS FOR -->
+    <section class="ctr">
+      <p class="sl">Who This Book Is For</p>
+      <h2>This Book Was Written for You If…</h2>
+      <div class="wgrid">
+
+        <div class="wc">
+          <i class="ti ti-mail-off wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You've sent hundreds of applications and heard nothing back</p>
+            <p class="wd">The resume black hole is not bad luck — it is a structural problem with the traditional job
+              search. This book replaces the approach entirely.</p>
+            <span class="wtg">Part 1 — Ch 1</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-building-off wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You've been laid off in an AI-driven restructuring</p>
+            <p class="wd">619,000+ tech jobs cut since 2023. If you've been caught in this wave, this book is the system
+              for rebuilding visibility and securing your next role faster.</p>
+            <span class="wtg">Part 1 — Ch 1</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-ghost wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You've applied to jobs that turned out to be ghost listings</p>
+            <p class="wd">25–30% of public postings have no real intent to hire. The hidden job market — where 80% of
+              roles are filled — is where this book teaches you to operate.</p>
+            <span class="wtg">Part 1 — Ch 2</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-eye-off wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You have deep skills but zero online visibility</p>
+            <p class="wd">75% of LinkedIn users never post a single piece of content. That 75% is completely invisible
+              to inbound recruitment. This book makes you visible to the right people.</p>
+            <span class="wtg">Part 3 — Ch 10</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-robot wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You want to master AI tools before your competitors do</p>
+            <p class="wd">Google Antigravity, NotebookLM, Perplexity, Google AI Studio, and Claude Pro — this book walks
+              you through the exact career-transforming workflows for each./p>
+              <span class="wtg">Part 2 — Ch 4–8</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-id-badge wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You want to build a personal brand that generates inbound job offers</p>
+            <p class="wd">The author received 8 job offers in 8 months through inbound alone. The three-circle niche
+              method, the positioning statement framework, and the 30-day brand audit are all here.</p>
+            <span class="wtg">Part 3 — Ch 9</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-briefcase wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You're a tech professional wanting a clear role blueprint</p>
+            <p class="wd">12 tech role blueprints covering AI/ML, Cloud, Cybersecurity, Data Science, DevOps,
+              Full-Stack, Product, and more — each with salary data, proof portfolio, and LinkedIn strategy.</p>
+            <span class="wtg">Part 4 — Ch 13–16</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-writing wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You're a writer, creative, or ops professional going AI-native</p>
+            <p class="wd">12 role blueprints for writers, designers, musicians, project managers, consultants, and ops
+              professionals — proving inbound recruitment works for every computer-based career.</p>
+            <span class="wtg">Part 5 — Ch 17–20</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-map wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You want a step-by-step 6-month execution plan, not generic advice</p>
+            <p class="wd">Part 6 is a week-by-week action plan. Every step tells you exactly what to do, when to do it,
+              and what result to expect — no theory without a same-day action.</p>
+            <span class="wtg">Part 6 — Ch 21</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-network wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You hate cold-pitching and want to network without awkwardness</p>
+            <p class="wd">The five-step LinkedIn networking sequence and the concentric-circle depth model replace cold
+              DMs entirely. Build genuine relationships that produce referrals you never asked for.</p>
+            <span class="wtg">Part 6 — Ch 24</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-cpu wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You want to deploy autonomous AI agents for your career</p>
+            <p class="wd">Part 7 covers OpenClaw, Hermes Agent, and OpenFang — the next frontier of professional
+              advantage. Agents that research, monitor, and prepare so you can focus on strategy.</p>
+            <span class="wtg">Part 7 — Ch 26–29</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-server wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You want to run powerful AI models locally for free, with full privacy</p>
+            <p class="wd">Appendix E covers Ollama, LM Studio, Open WebUI, and model selection by hardware. Local models
+              cost nothing to run — total data sent to external cloud: $0. The best results are obtained with a $20 USD
+              subscription for Claude Pro and another $20 USD subscription to Google AI Pro.</p>
+            <span class="wtg">Appendix E</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-clock wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You're willing to commit 6–12 months of disciplined, consistent action</p>
+            <p class="wd">This book is for professionals ready to take full responsibility for their career. The system
+              works — but only for those willing to execute it. If you are one of them, the results are predictable.</p>
+            <span class="wtg">All Parts</span>
+          </div>
+        </div>
+
+        <div class="wc">
+          <i class="ti ti-trending-up wi" aria-hidden="true"></i>
+          <div class="wb">
+            <p class="wt">You want to negotiate from a position of choice, not desperation</p>
+            <p class="wd">Month 6 means multiple simultaneous inbound offers. Not applying and hoping — being chosen.
+              The difference is a system, consistently executed. This is that system.</p>
+            <span class="wtg">Part 6 — Ch 21</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="dv" />
+
+    <!-- PREORDER CTA -->
+    <section id="preorder" class="ctr">
+      <p class="sl">Preorder</p>
+      <div class="fcta">
+        <h3>One Preorder. Twelve Weeks of Tools. The Full Blueprint.</h3>
+        <p>Lock in the lowest price the book will ever be. Your Patreon access activates the moment you preorder — Week
+          1's tool drops immediately. The blueprint is here. The only variable is you.</p>
+        <div class="pr">
+          <span class="orig">$30</span>
+          <span class="sale">$10</span>
+          <span class="svb">Save 67%</span>
+        </div>
+        <a href="https://patreon.com/thomascherickal" target="_blank" rel="noopener" class="bp"
+          style="font-size:.95em;padding:15px 50px;">Preorder on Patreon &rarr;</a>
+        <p class="cn2">Join at <a href="https://patreon.com/thomascherickal" target="_blank"
+            rel="noopener">patreon.com/thomascherickal</a> to activate your 12-week tool series.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="foot">
+      <p>© 2026 Thomas Cherickal &nbsp;·&nbsp; The Digital Futurist &nbsp;·&nbsp; <a href="https://thomascherickal.com"
+          target="_blank" rel="noopener">thomascherickal.com</a> &nbsp;·&nbsp; Chennai, India</p>
+      <p><a href="https://thomascherickal.kit.com" target="_blank" rel="noopener">Newsletter</a> &nbsp;·&nbsp; <a
+          href="https://topmate.io/thomascherickal" target="_blank" rel="noopener">Free Consult</a> &nbsp;·&nbsp; <a
+          href="https://patreon.com/thomascherickal" target="_blank" rel="noopener">Patreon</a> &nbsp;·&nbsp; <a
+          href="https://linktr.ee/thomascherickal" target="_blank" rel="noopener">All Links</a></p>
+    </footer>
+
+  </div>
+</body>
+
+</html>
