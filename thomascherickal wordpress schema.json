@@ -1,0 +1,350 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://thomascherickal.com/#website",
+      "url": "https://thomascherickal.com/",
+      "name": "The Digital Futurist",
+      "alternateName": "Thomas Cherickal",
+      "description": "The Digital Futurist — building Generative AI, SLMs, LLMs, Agentic AI Tools, Local AI, AI Agents, Quantum Computing, Blockchain, Web3, Python, Golang, Rust, and Mojo. Generative AI Engineer, Open-Source Developer, SLM Engineer, Local AI Engineer, LLM Engineer, Researcher.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://thomascherickal.com/#organization"
+      },
+      "author": {
+        "@id": "https://thomascherickal.com/#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://thomascherickal.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://thomascherickal.com/#organization",
+      "name": "The Digital Futurist",
+      "alternateName": "Thomas Cherickal",
+      "url": "https://thomascherickal.com/",
+      "logo": {
+        "@id": "https://thomascherickal.com/#primaryimage"
+      },
+      "image": {
+        "@id": "https://thomascherickal.com/#primaryimage"
+      },
+      "description": "Research brand specializing in open-source development in Generative AI, Blockchain AI, Quantum AI, Local AI, AI Tools Expertise, and individual AI training and mentoring for students, professionals, corporates, and CXOs.",
+      "slogan": "Building the AI Convergence.",
+      "founder": {
+        "@id": "https://thomascherickal.com/#person"
+      },
+      "foundingDate": "2020-05-05",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        }
+      },
+      "areaServed": "Worldwide",
+      "knowsAbout": [
+        "Small Language Models",
+        "AI Agent development",
+        "Large Language Models",
+        "Local AI Development",
+        "Generative AI Development",
+        "AI Consulting",
+        "AI Mentoring",
+        "Website Creation",
+        "Online Brand Building",
+        "Blockchain and AI",
+        "Web3 and AI",
+        "Agentic AI Tools",
+        "Python",
+        "Golang",
+        "Rust",
+        "Mojo",
+        "Quantum Computing",
+        "Quantum AI",
+        "Quantum Use-Cases"
+      ],
+      "hasOfferCatalog": {
+        "@id": "https://thomascherickal.com/#servicecatalog"
+      },
+      "sameAs": [
+        "https://linktr.ee/thomascherickal",
+        "https://github.com/thomascherickal",
+        "https://thomascherickal.github.io",
+        "https://linkedin.com/in/thomascherickal"
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://thomascherickal.com/#servicecatalog",
+      "name": "The Digital Futurist — Services & Products",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "1-on-1 AI Consulting & Mentoring",
+          "description": "Personalized consulting sessions on AI strategy, Local LLMs, SLM deployment, AI Engineering, and Career Mentoring.",
+          "url": "https://topmate.io/thomascherickal",
+          "category": "Consulting"
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Engineering & Strategy Playbooks",
+          "description": "AI engineering guides, code templates, and technical playbooks for developers and business leaders.",
+          "url": "https://thomascherickal.gumroad.com",
+          "category": "Digital Products"
+        },
+        {
+          "@type": "Offer",
+          "name": "Exclusive Patreon Content",
+          "description": "Both free and members-only early access to research projects, books and AI strategy guides.",
+          "url": "https://patreon.com/thomascherickal",
+          "category": "Membership"
+        }
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://thomascherickal.com/#profilepage",
+      "url": "https://thomascherickal.com/",
+      "name": "Thomas Cherickal – The Digital Futurist",
+      "headline": "Thomas Cherickal – Generative AI Engineer",
+      "description": "Profile of Thomas Cherickal - Generative AI Engineer, SLM Engineer, LLM Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger.",
+      "inLanguage": "en-US",
+      "dateCreated": "2020-01-01T00:00:00+05:30",
+      "dateModified": "2026-05-11T00:00:00+05:30",
+      "isPartOf": {
+        "@id": "https://thomascherickal.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://thomascherickal.com/#person"
+      },
+      "about": {
+        "@id": "https://thomascherickal.com/#person"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://thomascherickal.com/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://thomascherickal.com/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.com/"
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://thomascherickal.com/#primaryimage",
+      "url": "https://i0.wp.com/thomascherickal.com/wp-content/uploads/2021/09/cropped-cropped-cropped-cross-cloud-2-1.jpg",
+      "contentUrl": "https://i0.wp.com/thomascherickal.com/wp-content/uploads/2021/09/cropped-cropped-cropped-cross-cloud-2-1.jpg",
+      "width": 225,
+      "height": 225,
+      "caption": "Thomas Cherickal — The Digital Futurist"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://thomascherickal.com/#person",
+      "name": "Thomas Cherickal",
+      "alternateName": [
+        "Thomas Mathew Cherickal",
+        "The Digital Futurist"
+      ],
+      "url": "https://thomascherickal.com/",
+      "mainEntityOfPage": {
+        "@id": "https://thomascherickal.com/#profilepage"
+      },
+      "description": "Generative AI Engineer, SLM Engineer, LLM Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger, with expertise in AI strategy, AI Agent development, Local LLMs, SLM deployment, AI Engineering, and Career Mentoring. Specializing in open-source Generative AI, SLMs, LLMs, AI Agents, Quantum Computing, QAI, Blockchain, Web3, Python, Golang, Rust, and Mojo.",
+      "image": {
+        "@id": "https://thomascherickal.com/#primaryimage"
+      },
+      "jobTitle": " Generative AI Consultant & Independent Research Blogger",
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600015",
+        "addressCountry": "IN"
+      },
+      "workLocation": [
+        {
+          "@type": "Place",
+          "name": "Chennai, India (Primary)",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "Remote — Worldwide"
+        }
+      ],
+      "worksFor": {
+        "@id": "https://thomascherickal.com/#organization"
+      },
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Generative AI Consultant",
+          "description": "Provides Generative AI consulting for students and professionals to upskill in AI, build job-ready capabilities, and become future-proof in an AI-driven world.",
+          "skills": "Generative AI, AI Consulting, Career Mentoring, Online Brand Building, Upskilling Roadmaps"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Generative AI Engineer",
+          "description": "Builds open-source Generative AI projects in Python, Golang, Rust, and Mojo that implement leading LLM and SLM solutions locally, delivering enduring commercial value.",
+          "skills": "Python, Golang, Rust, Mojo, Generative AI, LLM Engineering, Open Source Development"
+        },
+        {
+          "@type": "Occupation",
+          "name": "SLM Engineer",
+          "description": "Specializes in building and deploying Small Language Models (SLMs) locally, creating high-performance, privacy-preserving AI solutions that run on consumer hardware",
+          "skills": "SLM Engineering, Local LLMs, Open Source AI, Model Quantization, Privacy-Preserving AI"
+        },
+        {
+          "@type": "Occupation",
+          "name": "LLM Engineer",
+          "description": "Designs and deploys Large Language Models (LLMs), developing advanced natural language processing solutions for complex business challenges.",
+          "skills": "LLM Engineering, NLP, Transformer Architectures, AI Development"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Local AI Engineer",
+          "description": "Specializes in running LLMs locally, focusing on privacy-preserving, cost-effective AI deployments that do not require cloud connectivity.",
+          "skills": "Local AI, Privacy-Preserving AI, LLM Optimization, Edge Computing"
+        },
+        {
+          "@type": "Occupation",
+          "name": "AI Tools Expert",
+          "description": "Evaluates and implements cutting-edge AI tools, enhancing productivity and innovation across professional workflows.",
+          "skills": "AI Tool Selection, Productivity Enhancement, Workflow Optimization"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Technical Content Writer",
+          "description": "Creates long-form technical content, developer tutorials, and technology playbooks for software engineers and business leaders.",
+          "skills": "Technical Writing, Developer Documentation, Tutorial Authoring"
+        },
+        {
+          "@type": "Occupation",
+          "name": "AI Mentor and Coach",
+          "description": "Guides individuals and teams in adopting frontier AI tools, prompt engineering, and integrating generative models into daily workflows.",
+          "skills": "AI Mentoring, Prompt Engineering, Workflow Integration, Career Coaching"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Online Brand Builder",
+          "description": "Mentors individuals at all career stages to build an online brand with deep online visibility across platforms.",
+          "skills": "Personal Branding, Multi-platform Publishing, SEO, Content Strategy"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Independent Research Blogger",
+          "description": "Investigates cutting-edge emerging technology across all expertise domains under the brand The Digital Futurist, publishing on multiple platforms.",
+          "skills": "Technology Research, Trend Analysis, Multi-platform Publishing"
+        }
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Large Language Models",
+        "Small Language Models",
+        "Local LLMs",
+        "Generative AI",
+        "AI Agents",
+        "Prompt Engineering",
+        "Retrieval-Augmented Generation",
+        "Quantum Computing",
+        "Quantum AI",
+        "Blockchain",
+        "Blockchain AI",
+        "Decentralized Finance",
+        "Web3",
+        "Web3 AI",
+        "Cybersecurity",
+        "Python",
+        "Golang",
+        "Rust",
+        "Mojo",
+        "Open Source Software",
+        "Technical Content Writing",
+        "AI Consulting for SLMs",
+        "Open Source Development",
+        "AI Training and Mentoring",
+        "Online Brand Building",
+        "Career Strategy",
+        "SLM Engineering",
+        "LLM Engineering"
+      ],
+      "sameAs": [
+        "https://thomascherickal.github.io",
+        "https://github.com/thomascherickal",
+        "https://linkedin.com/in/thomascherickal",
+        "https://hackernoon.com/u/thomascherickal",
+        "https://thomascherickal.medium.com/",
+        "https://thomascherickal.substack.com",
+        "https://thesingularitypoint.substack.com",
+        "https://thomascherickal.kit.com",
+        "https://differ.blog/@thomascherickal",
+        "https://hubpages.com/@thomascherickal",
+        "https://topmate.io/thomascherickal",
+        "https://t.me/thomascherickal",
+        "https://thomascherickal.tumblr.com",
+        "https://thomascherickal.hashnode.dev",
+        "https://thomascherickal.gumroad.com",
+        "https://thesingularitypoint.blogspot.com",
+        "https://thomascherickal.contently.com",
+        "https://patreon.com/thomascherickal",
+        "https://thomascherickal.quora.com",
+        "https://muckrack.com/thomascherickal",
+        "https://bsky.app/profile/thomascherickal.bsky.social",
+        "https://gitlab.com/thomascherickal",
+        "https://www.hackerrank.com/thomascherickal",
+        "https://www.hackerearth.com/@thomascherickal",
+        "https://www.codewars.com/users/thomascherickal",
+        "https://exercism.org/profiles/thomascherickal",
+        "https://www.kaggle.com/thomascherickal",
+        "https://takeuforward.org/profile/thomascherickal",
+        "https://leetcode.com/u/thomascherickal",
+        "https://linktr.ee/thomascherickal"
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+
+
