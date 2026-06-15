@@ -1,215 +1,149 @@
-# The Digital Futurist · thomascherickal.com · thomascherickal.github.io
-
----
-
-# Gen AI, Quantum, Blockchain & Emerging Technologies — Educator and Communicator
-
-**Written Articles · Authored Books · POC Apps**
+# Python & Rust AI/ML Engineer
 
 *by Thomas Cherickal · The Digital Futurist*
 
 ---
 
-## The Mission
+## The Transition
 
-> *"Making the technologies that will define humanity real, accessible, and actionable — for everyone."*
+For six years, I was a trained developer who worked as a writer.
 
----
+500+ articles across HackerNoon, Medium, Substack, Hashnode — and my canonical home at thomascherickal.com. I explained Generative AI, Quantum Computing, and emerging technologies to audiences who needed clarity.
 
-## The Problem Nobody Is Solving
+But something was missing.
 
-Here is the truth nobody in tech wants to say out loud.
+You can write about systems. You can analyze architecture. You can critique trade-offs. But until you sit down and actually *build*, you're describing terrain you've never walked.
 
-The most important technologies of our lifetime - Generative AI, Quantum Computing, Blockchain, and the wave of Emerging Technologies that follows them - are being explained by the wrong people.
+So I transitioned.
 
-Academics write for academics.
-
-Vendors write for sales pipelines.
-
-Journalists write for clicks.
-
-And the people who actually need to understand these technologies - executives, founders, developers, students, policy makers, and curious humans everywhere - are left with content that is either incomprehensible, misleading, or both.
-
-That is the gap I exist to close.
-
-I strongly believe that technical complexity is never a valid excuse for bad communication. The greatest ideas in human history were eventually explained to children. And if you can explain something to a child, you truly understand it yourself.
-
-That's my standard. And I hold myself to it in every single thing I publish.
+And here's what that looks like: I bring the clarity of a writer into production code. Rigorous thinking. Zero tolerance for hand-waving. The ability to name what things are. And the understanding that the best code is code your team can reason about and extend.
 
 ---
 
-## The Four Pillars
+## What I Build
 
-### 1. Generative AI and Large Language Models
+### SLMs and LLMs — Production Infrastructure
 
-The inflection point has already happened.
+Small Language Models and Large Language Models are the backbone of the AI stack right now.
 
-GPT-4 was the moment. Claude, Gemini, Llama, Mistral, and a hundred others are the acceleration. The agentic era - MCP, A2A protocols, local model stacks, multi-modal reasoning - is where we are right now.
+SLMs run on edge devices, serve real-time inference, and handle tasks that don't need frontier model complexity. LLMs handle reasoning, multi-step planning, and the hard problems.
 
-I cover all of it.
+Both need infrastructure.
 
-Not as a spectator. As someone who runs local LLM stacks on Windows 11, evaluates models hands-on with LM Studio, routes production traffic through OpenRouter, and builds with these tools every single day.
+**In Python:** RAG pipelines that retrieve the right context. Agentic frameworks using OpenFang and MCP protocols. Fine-tuning systems for knowledge distillation. Local model deployment stacks. Prompt engineering as code — testing, versioning, optimization.
 
-My GenAI content covers:
+**In Rust:** Token streaming engines for real-time responses. Inference schedulers that handle concurrent requests without melting. Embedding pipelines. Quantization tooling. Hardware acceleration layers.
 
-- Model comparisons and benchmark deep dives (what the numbers actually mean)
-- Prompt engineering, from basics to advanced system design
-- Agentic frameworks - OpenFang, AutoGen, CrewAI, LangChain, and beyond
-- Enterprise AI adoption - where it works, where it fails, and why
-- The philosophical stakes - AGI timelines, alignment, and what humanity does next
+The work is unglamorous: vector tuning, fallback strategies, cost optimization, context-window management. But this is where systems actually work or fail.
 
-### 2. Quantum Computing
+### AI Ecosystem Infrastructure
 
-This is the most misunderstood technology of the decade.
+The AI stack is being rewritten.
 
-Not because it is too complex to explain - but because almost nobody is trying to explain it honestly.
+Not just the models. The entire infrastructure that makes models useful.
 
-Quantum computing is simultaneously overhyped and under-communicated. The press talks about it like magic. The academics talk about it like a seminar. And enterprises preparing for the post-classical computing era are left completely in the dark about what quantum means for their encryption, their optimisation problems, their competitive position.
+**In Python:** Request routing across model providers. Response caching. Token accounting. Monitoring and observability. Integration with vector databases, retrieval systems, external APIs.
 
-I fill that gap with content that is technically grounded and written for humans.
+**In Rust:** The performance layer. Low-latency inference orchestration. Batch processing pipelines. Memory-efficient model loading and swapping. Concurrent request handling that scales.
 
-My Quantum content covers:
+Both languages work together here. Python handles the logic. Rust handles the speed.
 
-- Quantum fundamentals for non-physicists (qubits, superposition, entanglement - in plain language)
-- Real hardware timelines - IBM, Google, IonQ, Quantinuum, PsiQuantum - what is real vs. roadmap
-- Quantum algorithms that matter right now - Shor's, Grover's, QAOA, VQE
-- Post-Quantum Cryptography (PQC) - why every enterprise needs a migration strategy today
-- Quantum advantage - where it will arrive first and who is most exposed
-
-### 3. Blockchain and Web3
-
-I am not a maximalist. And I am not a sceptic.
-
-I am something much rarer in this space - an honest analyst.
-
-Blockchain technology has produced genuine, world-changing innovation. It has also produced spectacular fraud, breathtaking hype, and more failed projects than any other technology category of the last decade.
-
-I call both. Clearly. Without apology.
-
-My Blockchain and Web3 content covers:
-
-- DeFi - real protocols, real risks, real yields (no sponsored nonsense)
-- Smart contract architecture - Solidity, security auditing, common exploits
-- Tokenisation of real-world assets - where it is working and where it is theatre
-- Regulatory landscape - MiCA, SEC, RBI, global framework evolution
-- Enterprise blockchain - what makes sense, what doesn't, and how to decide
-
-### 4. Emerging Technologies
-
-The category that contains everything else that will change your life before you see it coming.
-
-- AI-native hardware (DGX Spark, Blackwell, edge inference chips)
-- Spatial computing and AR/VR convergence
-- Neuromorphic computing and brain-computer interfaces
-- Synthetic biology meets AI
-- The convergence thesis - what happens when all four pillars collide
-
-This is where I do my most original thinking. Watch this space.
+The goal is simple: build systems that are fast, correct, and don't require me to maintain them forever.
 
 ---
 
-## The Three Delivery Vehicles
+## The Discipline
 
-### Written Articles — 500+ Published · 10+ Platforms
+I build with Test-Driven Development as default.
 
-Long-form is my primary medium and I am unapologetic about it.
+100% code coverage is the target. Not because numbers look good in dashboards — they don't. But because every line represents a decision about correctness. If I haven't tested it, I don't understand it.
 
-Because the ideas that matter take more than 280 characters to communicate properly.
+The code ships with docstrings, type hints, architecture decisions recorded. SOLID principles. Modular design. Someone will read this six months from now. They should understand it without me.
 
-Every article I publish on thomascherickal.com - syndicated to HackerNoon, Medium, Substack, Dev.to, Hashnode, LinkedIn, and beyond - follows the same promise: technically rigorous, written for humans, no filler, no fluff.
+### AI-Assisted Development
 
-My articles come in three formats:
+I work alongside Claude Code, GitHub Copilot, Google Antigravity, and emerging IDE tools.
 
-- **Deep Explainers** - 2,000 to 5,000 words, covering a single concept with the depth it deserves
-- **Landscape Analyses** - surveying an entire technology space, its players, and its trajectory
-- **Opinion Pieces** - my genuine take on where things are going, backed by evidence and argued with conviction
+Not as a crutch.
 
-### Authored Books — *RECRUITED* and Beyond
+As a thought partner.
 
-*RECRUITED* is my debut book - and it is the first chapter of a much longer story.
+These tools surface patterns. They catch boilerplate. They let me spend less time on scaffolding and more time on the hard problems: correctness, performance, maintainability.
 
-The book explores what happens to human identity, purpose, and meaning when AI can do almost anything better than we can. It is speculative. It is urgent. And from the bottom of my heart, it is the most personally meaningful thing I have ever written.
-
-Preorder now at $10 USD.
-
-Free with an active Patreon subscription at patreon.com/thomascherickal.
-
-Launch price moves to $30 USD on 15 August 2026. The clock is ticking.
-
-Future books in development span every pillar: a quantum computing primer for executives, a Web3 field guide for the post-hype era, and a GenAI playbook for independent professionals.
-
-### POC Apps — Working Software as Living Proof
-
-An educator who only writes is an educator with a credibility ceiling.
-
-I build Proof of Concept applications that demonstrate, in working code, that the ideas I write about are real - not theoretical.
-
-My POC work spans:
-
-- **GenAI Apps** - RAG pipelines, agentic workflows, local LLM integrations, prompt engineering tools
-- **Quantum Simulations** - algorithm visualisations, PQC demos, quantum circuit builders in Qiskit and Cirq
-- **Blockchain POCs** - smart contract deployments, DeFi protocol integrations, tokenisation sandboxes
-- **Emerging Tech Experiments** - multi-modal AI, edge inference, neuromorphic simulation
-
-Every POC lives publicly on github.com/thomascherickal.
-
-Because open source is how you prove you know what you're talking about.
+But the design is mine. The testing is mine. The responsibility for what ships is mine.
 
 ---
 
-## Who This Is For
+## What I'm Building
 
-Are you an enterprise leader who needs to brief your board on AI and quantum risk?
+> [!NOTE]
+> **All repositories listed below are upcoming open-source releases.**
 
-Are you a developer who wants to move from software engineering into AI engineering?
+### Q3 2026 releases (5 projects)
+- **slm-inference-engine** [Rust] — High-performance Rust library for local SLM inference on CPU-only hardware. Optimized for 2–8 GB RAM targets with streaming support.
+- **ai-career-toolkit** [Python] — Python scripts, prompts, and automation tools accompanying the *RECRUITED* book — NotebookLM workflows, resume AI analysis, LinkedIn audit scripts.
+- **quantum-ai-experiments** [Python] — Research notebooks exploring QAI intersections — Qiskit, Q#, Quantinuum stack experiments, and quantum threat modeling for blockchain systems.
+- **digital-futurist-site** [HTML/CSS] — Open-source GitHub Pages site with JSON-LD schema, SEO metadata, dark-mode design, and cross-platform social integration.
+- **rust-llm-router** [Rust] — Zero-latency request router for multi-provider LLM APIs with automatic failover, rate-limit awareness, and cost-optimized model selection.
 
-Are you a founder trying to decide whether blockchain genuinely solves your problem?
+### Q4 2026 releases (5 projects)
+- **vector-forge** [Rust] — High-performance SIMD-accelerated vector operations library for embedding pipelines — cosine similarity, HNSW indexing, and ANN search.
+- **ai-cli** [Rust] — Terminal-native AI assistant built in Rust — streaming completions, tool-calling, local model support via llama.cpp bindings, and custom plugins.
+- **neural-bench** [Python] — Automated benchmarking suite for local LLM inference — latency, throughput, TTFT, and quality metrics with auto hardware detection.
+- **agent-memory-kit** [Python] — Long-term episodic and semantic memory layer for AI agents using LanceDB and Nomic embeddings — pluggable into LangChain or LlamaIndex.
+- **slm-distiller** [Python] — An ultra-efficient distillation and low-rank adaptation (LoRA) pipeline for fine-tuning 1B-4B parameter SLMs on consumer GPUs.
 
-Are you a student who knows these technologies matter but has no idea where to start?
+### Q1 2027 releases (5 projects)
+- **prompt-optimizer** [Python] — Self-correcting prompt engineering and evaluation framework designed specifically to maximize reasoning capability in local Gemma models.
+- **rust-rag-engine** [Rust] — A lightning-fast, zero-dependency RAG indexer and query engine written in Rust, featuring native markdown parsing and chunking optimization.
+- **slm-wasm-chat** [Rust] — WebAssembly-optimized local SLM inference runner allowing quantized Gemma models to run client-side in the browser via WebGPU acceleration.
+- **local-model-dashboard** [Web] — Vibrant, responsive client-side dashboard for monitoring local LLM instances (Ollama, LM Studio) with real-time charts, metrics, and memory logs.
+- **gemma-playground** [Web] — A web-based interactive prompt playground and chat interface built for testing local SLM system prompts, settings, and structured output formatting.
 
-Are you a content team that needs a technically credible voice to produce material your audience will actually trust?
-
-If any of those land - I am your person.
-
----
-
-## The Credibility Stack
-
-Why Thomas Cherickal?
-
-Because I don't just cover these fields. I work in them.
-
-- 500+ long-form articles published and counting
-- Active local AI infrastructure - LM Studio, OpenFang, OpenRouter, SearXNG
-- Public GitHub portfolio at thomascherickal.github.io
-- Debut book in active production
-- 10+ platforms, one canonical home - thomascherickal.com
-- Chennai-based, globally reaching
-
-And because I have been building this - consistently, publicly, without shortcuts - for years.
-
-That is what credibility looks like.
+These are not toys. They're systems I want to work well.
 
 ---
 
-## Let's Work Together
+## What I'm Bringing to Your Team
 
-**🗓️ 1-on-1 Consulting** → topmate.io/thomascherickal
+**Translation between domains.** I've spent years explaining complex systems to non-specialists. That skill applies to code too. I can help your team understand what a system does without drowning it in implementation details.
 
-**🛒 Digital Products and Playbooks** → thomascherickal.gumroad.com
+**Clarity without dumbing down.** Not every problem needs a sophisticated solution. When it does, I can explain why and what we gain by adding complexity.
 
-**📚 Exclusive Member Content** → patreon.com/thomascherickal
+**Rigorous thinking.** Six years of writing taught me that technical complexity is never an excuse for unclear communication.
 
-Collaboration areas include technical writing, AI consulting, sponsored content, course collaborations, AI upskilling for individuals at every level, and enterprise AI upskilling programmes.
-
-Connect with me on LinkedIn. No pitch. No pressure. Just a conversation about the most important technologies of our lifetime - and what they mean for yours.
-
-Now's your chance.
-
-**All the very best!**
-
-*Thomas Cherickal · The Digital Futurist*
+**Partnership, not heroics.** My goal is to build something good, help your team own it, and move forward. You succeed when you don't need me to maintain the codebase forever. That's the goal.
 
 ---
 
-© 2026 Thomas Cherickal · The Digital Futurist · thomascherickal.com · Chennai, India 🇮🇳
+## Where to Find Me
+
+- **GitHub:** github.com/thomascherickal — upcoming repositories as they go public
+- **LinkedIn:** linkedin.com/in/thomascherickal — technical thoughts and updates
+- **Portfolio:** thomascherickal.github.io — open infrastructure and projects
+- **Canonical home:** thomascherickal.com — long-form technical writing
+- **Consulting:** topmate.io/thomascherickal — 1-on-1 for teams evaluating AI infrastructure
+- **Newsletter:** thomascherickal.kit.com — weekly updates on GenAI and emerging tech
+- **Digital products:** thomascherickal.gumroad.com — frameworks and playbooks
+- **Community:** patreon.com/thomascherickal — exclusive technical content
+
+---
+
+## Let's Work
+
+I'm interested in roles where:
+
+- The systems are real and serve actual users.
+- Your team values clarity and maintainability alongside performance.
+- You're working on problems that will matter in five years.
+- Async-first, distributed teams work fine.
+
+Contract or full-time both work.
+
+Connect on LinkedIn if you want to talk about what you're building.
+
+Looking forward.
+
+---
+
+© 2026 Thomas Cherickal · The Digital Futurist · Chennai, India 🇮🇳

@@ -16,7 +16,7 @@ Available for technical writing contracts, AI consulting engagements, and course
 ---
 
 ### Newsletter
-* [thomascherickal.kit.com](https://thomascherickal.kit.com) - Deep-dives on AI upskilling, Career Strategy, Gen AI, Local LLMs, AI Agents, Rust, Python, Mojo, and Online Brand Building.
+* [thomascherickal.kit.com](https://thomascherickal.kit.com) - Deep-dives on AI upskilling, Career Strategy, Gen AI, Local LLMs, AI Agents, Rust, Python, and Online Brand Building.
 
 ---
 

@@ -8,7 +8,7 @@
       "url": "https://thomascherickal.com/",
       "name": "The Digital Futurist",
       "alternateName": "Thomas Cherickal",
-      "description": "The Digital Futurist — building Generative AI, SLMs, LLMs, Agentic AI Tools, Local AI, AI Agents, Quantum Computing, Blockchain, Web3, Python, Golang, Rust, and Mojo. Generative AI Engineer, Open-Source Developer, SLM Engineer, Local AI Engineer, LLM Engineer, Researcher.",
+      "description": "The Digital Futurist — building Generative AI, SLMs, LLMs, Agentic AI Tools, Local AI, AI Agents, Quantum Computing, Blockchain, Web3, Python, and Rust. Generative AI Engineer, Open-Source Developer, SLM Engineer, Local AI Engineer, LLM Engineer, Researcher.",
       "inLanguage": "en-US",
       "publisher": {
         "@id": "https://thomascherickal.com/#organization"
@@ -67,9 +67,7 @@
         "Web3 and AI",
         "Agentic AI Tools",
         "Python",
-        "Golang",
         "Rust",
-        "Mojo",
         "Quantum Computing",
         "Quantum AI",
         "Quantum Use-Cases"
@@ -171,7 +169,7 @@
       "mainEntityOfPage": {
         "@id": "https://thomascherickal.com/#profilepage"
       },
-      "description": "Generative AI Engineer, SLM Engineer, LLM Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger, with expertise in AI strategy, AI Agent development, Local LLMs, SLM deployment, AI Engineering, and Career Mentoring. Specializing in open-source Generative AI, SLMs, LLMs, AI Agents, Quantum Computing, QAI, Blockchain, Web3, Python, Golang, Rust, and Mojo.",
+      "description": "Generative AI Engineer, SLM Engineer, LLM Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger, with expertise in AI strategy, AI Agent development, Local LLMs, SLM deployment, AI Engineering, and Career Mentoring. Specializing in open-source Generative AI, SLMs, LLMs, AI Agents, Quantum Computing, QAI, Blockchain, Web3, Python, and Rust.",
       "image": {
         "@id": "https://thomascherickal.com/#primaryimage"
       },
@@ -223,8 +221,8 @@
         {
           "@type": "Occupation",
           "name": "Generative AI Engineer",
-          "description": "Builds open-source Generative AI projects in Python, Golang, Rust, and Mojo that implement leading LLM and SLM solutions locally, delivering enduring commercial value.",
-          "skills": "Python, Golang, Rust, Mojo, Generative AI, LLM Engineering, Open Source Development"
+          "description": "Builds open-source Generative AI projects in Python and Rust that implement leading LLM and SLM solutions locally, delivering enduring commercial value.",
+          "skills": "Python, Rust, Generative AI, LLM Engineering, Open Source Development"
         },
         {
           "@type": "Occupation",
@@ -264,12 +262,6 @@
         },
         {
           "@type": "Occupation",
-          "name": "Online Brand Builder",
-          "description": "Mentors individuals at all career stages to build an online brand with deep online visibility across platforms.",
-          "skills": "Personal Branding, Multi-platform Publishing, SEO, Content Strategy"
-        },
-        {
-          "@type": "Occupation",
           "name": "Independent Research Blogger",
           "description": "Investigates cutting-edge emerging technology across all expertise domains under the brand The Digital Futurist, publishing on multiple platforms.",
           "skills": "Technology Research, Trend Analysis, Multi-platform Publishing"
@@ -294,9 +286,7 @@
         "Web3 AI",
         "Cybersecurity",
         "Python",
-        "Golang",
         "Rust",
-        "Mojo",
         "Open Source Software",
         "Technical Content Writing",
         "AI Consulting for SLMs",

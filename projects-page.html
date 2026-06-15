@@ -28,12 +28,9 @@
       --rs-dim: #4a1f0c;
       --rs-glow: #d4622a33;
 
-      --go: #00adb5;
-      --go-dim: #002e31;
-
-      --mojo: #9b5de5;
-      --mojo-dim: #2c1a52;
-      --mojo-glow: #9b5de533;
+      --web: #00d4ff;
+      --web-dim: #002d3d;
+      --web-glow: #00d4ff33;
 
       --gemma: #34d399;
       --gemma-dim: #0a3325;
@@ -311,17 +308,13 @@
       border: 1px solid var(--rs);
     }
 
-    .lang-badge.go {
-      background: var(--go-dim);
-      color: var(--go);
-      border: 1px solid var(--go);
+    .lang-badge.web {
+      background: var(--web-dim);
+      color: var(--web);
+      border: 1px solid var(--web);
     }
 
-    .lang-badge.mojo {
-      background: var(--mojo-dim);
-      color: var(--mojo);
-      border: 1px solid var(--mojo);
-    }
+
 
     .section-title {
       font-family: 'Times New Roman', Times, serif !important;
@@ -392,13 +385,11 @@
       background: linear-gradient(90deg, var(--rs), transparent);
     }
 
-    .card.go::before {
-      background: linear-gradient(90deg, var(--go), transparent);
+    .card.web::before {
+      background: linear-gradient(90deg, var(--web), transparent);
     }
 
-    .card.mojo::before {
-      background: linear-gradient(90deg, var(--mojo), transparent);
-    }
+
 
     .card:hover {
       transform: translateY(-4px);
@@ -413,9 +404,11 @@
       box-shadow: 0 14px 40px var(--rs-glow);
     }
 
-    .card.mojo:hover {
-      box-shadow: 0 14px 40px var(--mojo-glow);
+    .card.web:hover {
+      box-shadow: 0 14px 40px var(--web-glow);
     }
+
+
 
     @keyframes fadeUp {
       from {
@@ -467,13 +460,11 @@
       background: var(--rs-dim);
     }
 
-    .card.go .card-icon {
-      background: var(--go-dim);
+    .card.web .card-icon {
+      background: var(--web-dim);
     }
 
-    .card.mojo .card-icon {
-      background: var(--mojo-dim);
-    }
+
 
     .card-status {
       font-family: var(--font-mono) !important;
@@ -499,7 +490,7 @@
 
     .status-research {
       background: rgba(155, 93, 229, .10);
-      color: var(--mojo);
+      color: #9b5de5;
       border: 1px solid rgba(155, 93, 229, .28);
     }
 
@@ -777,15 +768,7 @@
       color: var(--rs);
     }
 
-    .upcoming-card-lang.go {
-      background: var(--go-dim);
-      color: var(--go);
-    }
 
-    .upcoming-card-lang.mojo {
-      background: var(--mojo-dim);
-      color: var(--mojo);
-    }
 
     .upcoming-card-desc {
       font-size: 12px;
@@ -946,8 +929,7 @@
           <circle cx="60" cy="70" r="3" fill="#4b91d1" opacity="0.8" />
           <circle cx="200" cy="150" r="5" fill="#34d399" opacity="0.9" />
           <circle cx="370" cy="80" r="3" fill="#d4622a" opacity="0.8" />
-          <circle cx="470" cy="190" r="4" fill="#9b5de5" opacity="0.7" />
-          <circle cx="410" cy="310" r="3" fill="#00adb5" opacity="0.8" />
+
           <circle cx="170" cy="310" r="4" fill="#4b91d1" opacity="0.6" />
           <circle cx="290" cy="410" r="3" fill="#34d399" opacity="0.7" />
           <text x="210" y="145" font-family="'Courier New',monospace" font-size="9" fill="#34d399"
@@ -956,10 +938,7 @@
             opacity="0.8">Rust</text>
           <text x="46" y="65" font-family="'Courier New',monospace" font-size="9" fill="#4b91d1"
             opacity="0.8">Python</text>
-          <text x="475" y="186" font-family="'Courier New',monospace" font-size="9" fill="#9b5de5"
-            opacity="0.8">Mojo</text>
-          <text x="415" y="305" font-family="'Courier New',monospace" font-size="9" fill="#00adb5"
-            opacity="0.8">Go</text>
+
         </svg>
 
         <div class="container">
@@ -984,11 +963,11 @@
 
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-num" style="color:var(--py)">12</span>
+              <span class="stat-num" style="color:var(--py)">15</span>
               <span class="stat-label">Planned Repos</span>
             </div>
             <div class="stat">
-              <span class="stat-num" style="color:var(--rs)">4</span>
+              <span class="stat-num" style="color:var(--web)">3</span>
               <span class="stat-label">Languages</span>
             </div>
             <div class="stat">
@@ -996,7 +975,7 @@
               <span class="stat-label">Primary SLM Family</span>
             </div>
             <div class="stat">
-              <span class="stat-num" style="color:var(--go)">100%</span>
+              <span class="stat-num" style="color:var(--rs)">100%</span>
               <span class="stat-label">Local-First AI</span>
             </div>
           </div>
@@ -1004,48 +983,12 @@
       </section>
 
 
-      <!-- ══════════════════ GEMMA SPOTLIGHT ══════════════════════ -->
-      <div class="container">
-        <div class="gemma-strip">
-          <div class="gemma-strip-grid">
-            <div>
-              <p class="gemma-label">⬡ Local Inference Stack</p>
-              <h2 class="gemma-heading">Powered by the<br>Gemma Family</h2>
-              <p class="gemma-body">
-                Every project defaults to Google's Gemma SLM family — run via LM Studio or
-                llama.cpp on commodity hardware (2 GB VRAM, 16 GB RAM). No API keys,
-                no egress costs, no data leaving the machine.
-              </p>
-            </div>
-            <div class="gemma-models">
-              <div class="model-chip">
-                <div class="model-name">Gemma 3 4B</div>
-                <div class="model-meta">INT4 · fits 4 GB VRAM<br>Primary workhorse</div>
-              </div>
-              <div class="model-chip">
-                <div class="model-name">Gemma 4 E2B</div>
-                <div class="model-meta">Q4_K_M · 6 GB RAM<br>Reasoning tasks</div>
-              </div>
-              <div class="model-chip">
-                <div class="model-name">Gemma 4 E4B</div>
-                <div class="model-meta">MoE · 2B active params<br>Ultra-efficient</div>
-              </div>
-              <div class="model-chip">
-                <div class="model-name">Gemma 3n</div>
-                <div class="model-meta">Edge-native · 1 GB<br>Embedded agents</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
       <!-- ══════════════════ PYTHON PROJECTS ══════════════════════ -->
       <section class="section">
         <div class="container">
           <div class="section-header">
             <span class="lang-badge py">Python</span>
-            <h2 class="section-title">Major Projects</h2>
+            <h2 class="section-title">Major Python Projects</h2>
             <div class="section-line"></div>
           </div>
 
@@ -1053,29 +996,25 @@
 
             <div class="card py">
               <div class="card-head">
-                <div class="card-icon">🧠</div>
-                <span class="card-status status-active">Active</span>
+                <div class="card-icon">🐍</div>
+                <span class="card-status status-wip">Upcoming</span>
               </div>
-              <h3 class="card-title">GemmaForge</h3>
+              <h3 class="card-title">ai-career-toolkit</h3>
               <p class="card-desc">
-                A Python SDK wrapping LM Studio's OpenAI-compatible API for the full
-                Gemma SLM family. Supports streaming, function-calling, structured JSON
-                output, and multi-modal prompts — a drop-in replacement for the OpenAI
-                SDK with zero cloud dependency.
+                Python scripts, prompts, and automation tools accompanying the
+                <em>RECRUITED</em> book — NotebookLM workflows, resume AI analysis, LinkedIn audit scripts.
               </p>
               <div class="tags">
-                <span class="tag gemma">Gemma 3 / 4</span>
-                <span class="tag gemma">LM Studio</span>
-                <span class="tag db">SQLite cache</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">Pydantic v2</span>
-                <span class="tag">asyncio</span>
+                <span class="tag gemma">NotebookLM</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">GenAI</span>
+                <span class="tag">Automation</span>
+                <span class="tag">LinkedIn Audit</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--py)">OpenAI-compat</span><span
-                    class="metric-key">API surface</span></div>
-                <div class="metric"><span class="metric-val">Local only</span><span class="metric-key">Inference</span>
+                <div class="metric"><span class="metric-val" style="color:var(--py)">CLI & Prompts</span><span
+                    class="metric-key">API Surface</span></div>
+                <div class="metric"><span class="metric-val">Workflow</span><span class="metric-key">Integration</span>
                 </div>
                 <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
               </div>
@@ -1083,28 +1022,27 @@
 
             <div class="card py">
               <div class="card-head">
-                <div class="card-icon">🤖</div>
-                <span class="card-status status-active">Active</span>
+                <div class="card-icon">⚛️</div>
+                <span class="card-status status-wip">Upcoming</span>
               </div>
-              <h3 class="card-title">AgentStack-Local</h3>
+              <h3 class="card-title">quantum-ai-experiments</h3>
               <p class="card-desc">
-                CrewAI + LangGraph multi-agent orchestration configured entirely around
-                local Gemma inference. Agents browse the web, write and execute code,
-                query databases, and produce verifiable outputs — zero cloud LLM calls,
-                full DAG workflow control.
+                Research notebooks exploring QAI intersections — Qiskit, Q#, Quantinuum stack experiments, and quantum
+                threat modeling for blockchain systems.
               </p>
               <div class="tags">
-                <span class="tag gemma">Gemma 4 E4B</span>
-                <span class="tag">CrewAI</span>
-                <span class="tag">LangGraph</span>
-                <span class="tag db">PostgreSQL</span>
-                <span class="tag git">GitLab CI</span>
-                <span class="tag">Playwright</span>
+                <span class="tag">Qiskit</span>
+                <span class="tag">Q#</span>
+                <span class="tag">Quantinuum</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">Threat Modeling</span>
+                <span class="tag">Blockchain</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--py)">Multi-Agent</span><span
-                    class="metric-key">Architecture</span></div>
-                <div class="metric"><span class="metric-val">DAG</span><span class="metric-key">Workflow</span></div>
+                <div class="metric"><span class="metric-val" style="color:var(--py)">Qiskit · Q#</span><span
+                    class="metric-key">Quantum Stack</span></div>
+                <div class="metric"><span class="metric-val">Quantum ML</span><span class="metric-key">Focus</span>
+                </div>
                 <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
                 </div>
               </div>
@@ -1112,30 +1050,107 @@
 
             <div class="card py">
               <div class="card-head">
-                <div class="card-icon">🔬</div>
-                <span class="card-status status-wip">WIP</span>
+                <div class="card-icon">🐍</div>
+                <span class="card-status status-wip">Upcoming</span>
               </div>
-              <h3 class="card-title">QuantumCircuit-AI</h3>
+              <h3 class="card-title">neural-bench</h3>
               <p class="card-desc">
-                Hybrid quantum-classical ML pipeline bridging Qiskit circuits with
-                Gemma-generated circuit descriptions. SQLite caches transpiled circuits;
-                Redis pub/sub streams partial results to a FastAPI frontend targeting
-                IBMQ simulators and real QPU backends.
+                Automated benchmarking suite for local LLM inference — latency, throughput, TTFT, and quality metrics
+                with auto hardware detection and interactive leaderboard dashboard.
               </p>
               <div class="tags">
-                <span class="tag gemma">Gemma 3 4B</span>
-                <span class="tag">Qiskit</span>
-                <span class="tag db">SQLite · Redis</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">PennyLane</span>
+                <span class="tag gemma">Local LLMs</span>
+                <span class="tag">Benchmarking</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">Leaderboard</span>
+                <span class="tag">TTFT</span>
+                <span class="tag">Latency</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--py)">Hybrid</span><span
-                    class="metric-key">Quantum + ML</span></div>
-                <div class="metric"><span class="metric-val">Redis</span><span class="metric-key">Streaming</span></div>
+                <div class="metric"><span class="metric-val" style="color:var(--py)">TTFT / Latency</span><span
+                    class="metric-key">Metrics</span></div>
+                <div class="metric"><span class="metric-val">Interactive</span><span class="metric-key">Dashboard</span>
+                </div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card py">
+              <div class="card-head">
+                <div class="card-icon">🐍</div>
+                <span class="card-status status-wip">Upcoming</span>
+              </div>
+              <h3 class="card-title">agent-memory-kit</h3>
+              <p class="card-desc">
+                Long-term episodic and semantic memory layer for AI agents using LanceDB and Nomic embeddings —
+                pluggable into LangChain, LlamaIndex, or any agentic framework.
+              </p>
+              <div class="tags">
+                <span class="tag db">LanceDB</span>
+                <span class="tag">Nomic</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">LlamaIndex</span>
+                <span class="tag">Semantic Memory</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--py)">Vector DB</span><span
+                    class="metric-key">Storage</span></div>
+                <div class="metric"><span class="metric-val">LanceDB · Nomic</span><span class="metric-key">Tech
+                    Stack</span>
+                </div>
                 <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
                 </div>
+              </div>
+            </div>
+
+            <div class="card py">
+              <div class="card-head">
+                <div class="card-icon">🧠</div>
+                <span class="card-status status-wip">Upcoming</span>
+              </div>
+              <h3 class="card-title">slm-distiller</h3>
+              <p class="card-desc">
+                An ultra-efficient distillation and low-rank adaptation (LoRA) pipeline for fine-tuning 1B-4B parameter SLMs on standard consumer GPUs.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Fine-Tuning</span>
+                <span class="tag">LoRA / QLoRA</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Hugging Face</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--py)">LoRA / PEFT</span><span
+                    class="metric-key">Optimization</span></div>
+                <div class="metric"><span class="metric-val">&lt; 8 GB</span><span class="metric-key">GPU VRAM</span>
+                </div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card py">
+              <div class="card-head">
+                <div class="card-icon">🛠️</div>
+                <span class="card-status status-wip">Upcoming</span>
+              </div>
+              <h3 class="card-title">prompt-optimizer</h3>
+              <p class="card-desc">
+                Self-correcting prompt engineering and evaluation framework designed specifically to maximize reasoning capability in local Gemma models.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 3 / 4</span>
+                <span class="tag">DSPy</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">Structured Outputs</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--py)">DSPy</span><span
+                    class="metric-key">Framework</span></div>
+                <div class="metric"><span class="metric-val">Auto-Optimized</span><span class="metric-key">Accuracy</span>
+                </div>
+                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span></div>
               </div>
             </div>
 
@@ -1150,7 +1165,7 @@
         <div class="container">
           <div class="section-header">
             <span class="lang-badge rs">Rust</span>
-            <h2 class="section-title">Major Projects</h2>
+            <h2 class="section-title">Major Rust Projects</h2>
             <div class="section-line"></div>
           </div>
 
@@ -1158,28 +1173,51 @@
 
             <div class="card rs">
               <div class="card-head">
-                <div class="card-icon">⚡</div>
-                <span class="card-status status-active">Active</span>
+                <div class="card-icon">🦀</div>
+                <span class="card-status status-wip">Upcoming</span>
               </div>
-              <h3 class="card-title">InferCore</h3>
+              <h3 class="card-title">slm-inference-engine</h3>
               <p class="card-desc">
-                Minimal Rust inference runtime for GGUF quantised models. Wraps llama.cpp
-                via safe FFI bindings, exposes a streaming gRPC API, and compiles to a
-                single static binary deployable on Raspberry Pi 5 or commodity laptops
-                with as little as 2 GB VRAM.
+                High-performance Rust library for local SLM inference on CPU-only hardware. Optimized for 2–8 GB RAM
+                targets with streaming support.
               </p>
               <div class="tags">
-                <span class="tag gemma">GGUF Gemma</span>
-                <span class="tag">llama.cpp FFI</span>
-                <span class="tag">tonic gRPC</span>
-                <span class="tag db">SQLite session log</span>
-                <span class="tag git">GitLab</span>
-                <span class="tag">WASM target</span>
+                <span class="tag gemma">Local AI</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">CPU-only</span>
+                <span class="tag">Streaming</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--rs)">&lt;5 MB</span><span
-                    class="metric-key">Binary size</span></div>
-                <div class="metric"><span class="metric-val">gRPC</span><span class="metric-key">API</span></div>
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">2–8 GB</span><span
+                    class="metric-key">Target RAM</span></div>
+                <div class="metric"><span class="metric-val">CPU-only</span><span class="metric-key">Hardware</span>
+                </div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card rs">
+              <div class="card-head">
+                <div class="card-icon">🦀</div>
+                <span class="card-status status-wip">Upcoming</span>
+              </div>
+              <h3 class="card-title">rust-llm-router</h3>
+              <p class="card-desc">
+                Zero-latency request router for multi-provider LLM APIs with automatic failover, rate-limit awareness,
+                and cost-optimized model selection across OpenRouter, Ollama, and LM Studio.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">OpenRouter · Ollama</span>
+                <span class="tag">LM Studio</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">LLM Infra</span>
+                <span class="tag">Routing</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">Failover</span><span
+                    class="metric-key">Rate Limits</span></div>
+                <div class="metric"><span class="metric-val">Zero-overhead</span><span class="metric-key">Latency</span>
+                </div>
                 <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
                 </div>
               </div>
@@ -1187,59 +1225,104 @@
 
             <div class="card rs">
               <div class="card-head">
-                <div class="card-icon">🔍</div>
-                <span class="card-status status-stable">Stable</span>
+                <div class="card-icon">🦀</div>
+                <span class="card-status status-wip">Upcoming</span>
               </div>
-              <h3 class="card-title">GitGuard</h3>
+              <h3 class="card-title">vector-forge</h3>
               <p class="card-desc">
-                CLI security scanner for Git repositories written in Rust. Detects
-                secrets, leaked credentials, and policy violations across the full
-                commit history. Plugs natively into GitHub Actions and GitLab CI;
-                a local Gemma agent via InferCore summarises every finding in plain English.
+                High-performance SIMD-accelerated vector operations library for embedding pipelines — cosine similarity,
+                HNSW indexing, and ANN search at native speed for RAG workloads.
               </p>
               <div class="tags">
-                <span class="tag gemma">Gemma summary</span>
-                <span class="tag git">GitHub Actions · GitLab CI</span>
-                <span class="tag db">SQLite audit log</span>
-                <span class="tag">clap · git2-rs</span>
-                <span class="tag">regex</span>
+                <span class="tag db">Vector DB</span>
+                <span class="tag">SIMD</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">HNSW Index</span>
+                <span class="tag">ANN Search</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--rs)">Full history</span><span
-                    class="metric-key">Scan depth</span></div>
-                <div class="metric"><span class="metric-val">CI-native</span><span class="metric-key">Integration</span>
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">SIMD</span><span
+                    class="metric-key">Acceleration</span></div>
+                <div class="metric"><span class="metric-val">Native Speed</span><span class="metric-key">Search</span>
                 </div>
-                <div class="metric"><span class="metric-val">GPL-3</span><span class="metric-key">License</span></div>
+                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card rs">
+              <div class="card-head">
+                <div class="card-icon">🦀</div>
+                <span class="card-status status-wip">Upcoming</span>
+              </div>
+              <h3 class="card-title">ai-cli</h3>
+              <p class="card-desc">
+                Terminal-native AI assistant built in Rust — streaming completions, tool-calling, local model support
+                via llama.cpp bindings, and a plugin architecture for custom commands.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">llama.cpp</span>
+                <span class="tag">CLI Tool</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">Streaming</span>
+                <span class="tag">Plugins</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">Terminal</span><span
+                    class="metric-key">Interface</span></div>
+                <div class="metric"><span class="metric-val">Local Models</span><span class="metric-key">Backend</span>
+                </div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card rs">
+              <div class="card-head">
+                <div class="card-icon">🦀</div>
+                <span class="card-status status-wip">Upcoming</span>
+              </div>
+              <h3 class="card-title">rust-rag-engine</h3>
+              <p class="card-desc">
+                A lightning-fast, zero-dependency RAG indexer and query engine written in Rust, featuring native markdown parsing and chunking optimization for local SLMs.
+              </p>
+              <div class="tags">
+                <span class="tag">RAG</span>
+                <span class="tag">Markdown Parser</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">Tokenizers</span>
+                <span class="tag db">Vector Index</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">&gt; 10 MB/s</span><span
+                    class="metric-key">Indexing Speed</span></div>
+                <div class="metric"><span class="metric-val">Zero-dependency</span><span class="metric-key">Runtime</span>
+                </div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
               </div>
             </div>
 
             <div class="card rs">
               <div class="card-head">
                 <div class="card-icon">🌐</div>
-                <span class="card-status status-research">Research</span>
+                <span class="card-status status-wip">Upcoming</span>
               </div>
-              <h3 class="card-title">BlockLedger-RS</h3>
+              <h3 class="card-title">slm-wasm-chat</h3>
               <p class="card-desc">
-                Experimental Rust blockchain ledger with an embedded Gemma agent that
-                answers natural-language queries about on-chain state. PostgreSQL stores
-                chain data; axum serves a REST API; the WASM build target enables
-                browser-based block verification without a server.
+                WebAssembly-optimized local SLM inference runner allowing quantized Gemma models to run client-side in the browser via WebGPU acceleration.
               </p>
               <div class="tags">
-                <span class="tag gemma">Gemma 4 E4B</span>
-                <span class="tag db">PostgreSQL</span>
-                <span class="tag">axum · serde</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">WASM</span>
-                <span class="tag">sha2 · ed25519</span>
+                <span class="tag gemma">WASM / WebGPU</span>
+                <span class="tag">wgpu-rs</span>
+                <span class="tag git">Upcoming Repo</span>
+                <span class="tag">Edge AI</span>
+                <span class="tag">Client-side</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--rs)">WASM</span><span
-                    class="metric-key">Browser verify</span></div>
-                <div class="metric"><span class="metric-val">NL query</span><span class="metric-key">Chain state</span>
+                <div class="metric"><span class="metric-val" style="color:var(--rs)">WebGPU</span><span
+                    class="metric-key">Acceleration</span></div>
+                <div class="metric"><span class="metric-val">Client-side</span><span class="metric-key">Execution</span>
                 </div>
-                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span>
-                </div>
+                <div class="metric"><span class="metric-val">Apache 2</span><span class="metric-key">License</span></div>
               </div>
             </div>
 
@@ -1249,172 +1332,86 @@
 
       <div class="divider"></div>
 
-      <!-- ══════════════════ MINOR: GO + MOJO ════════════════════ -->
+      <!-- ══════════════════ HTML/CSS PROJECTS ════════════════════ -->
       <section class="section">
         <div class="container">
-
-          <div class="section-header" style="margin-bottom:10px">
-            <span class="lang-badge go">Go</span>
-            <h2 class="section-title">Minor Projects</h2>
+          <div class="section-header">
+            <span class="lang-badge web">HTML/CSS/JS</span>
+            <h2 class="section-title">Major Web Projects</h2>
             <div class="section-line"></div>
           </div>
-          <p class="minor-note">// Golang — concise, concurrent microservices that bridge the AI stack</p>
-          <div class="cards-grid minor" style="margin-bottom:44px">
 
-            <div class="card go">
+          <div class="cards-grid">
+
+            <div class="card web">
               <div class="card-head">
-                <div class="card-icon">🔀</div>
-                <span class="card-status status-stable">Stable</span>
+                <div class="card-icon">🌐</div>
+                <span class="card-status status-active">Active</span>
               </div>
-              <h3 class="card-title">ProxyRouter-Go</h3>
+              <h3 class="card-title">digital-futurist-site</h3>
               <p class="card-desc">
-                Ultra-light Go reverse proxy that load-balances LM Studio, Ollama, and
-                OpenRouter endpoints with per-model auth, rate limiting, and SQLite
-                request logging — a single binary LLM gateway with zero external deps.
+                Open-source GitHub Pages site with JSON-LD schema, SEO metadata, dark-mode design, and cross-platform
+                social integration. The page you're reading now.
               </p>
               <div class="tags">
-                <span class="tag gemma">LLM gateway</span>
-                <span class="tag db">SQLite</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">net/http · chi</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">SEO</span>
+                <span class="tag git">Open Source</span>
+                <span class="tag">JSON-LD</span>
+                <span class="tag">Responsive</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--go)">Single binary</span><span
-                    class="metric-key">Deploy</span></div>
+                <div class="metric"><span class="metric-val" style="color:var(--web)">GitHub Pages</span><span
+                    class="metric-key">Deployment</span></div>
+                <div class="metric"><span class="metric-val">100% SEO</span><span class="metric-key">Score</span></div>
                 <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
               </div>
             </div>
 
-            <div class="card go">
-              <div class="card-head">
-                <div class="card-icon">📡</div>
-                <span class="card-status status-wip">WIP</span>
-              </div>
-              <h3 class="card-title">LogStream-AI</h3>
-              <p class="card-desc">
-                Structured log aggregation microservice in Go with a WebSocket endpoint
-                where a Gemma agent delivers real-time anomaly narration for on-call
-                engineers. Log batches persist to PostgreSQL for long-term analysis.
-              </p>
-              <div class="tags">
-                <span class="tag gemma">Gemma anomaly</span>
-                <span class="tag db">PostgreSQL</span>
-                <span class="tag git">GitLab</span>
-                <span class="tag">WebSocket · zap</span>
-              </div>
-              <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--go)">WebSocket</span><span
-                    class="metric-key">Live stream</span></div>
-                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-              </div>
-            </div>
-
-            <div class="card go">
-              <div class="card-head">
-                <div class="card-icon">💬</div>
-                <span class="card-status status-wip">WIP</span>
-              </div>
-              <h3 class="card-title">DocuChat-Go</h3>
-              <p class="card-desc">
-                Zero-dependency Go CLI that ingests a directory of PDFs or Markdown files,
-                chunks and embeds them locally, then answers natural-language questions via
-                Gemma 4 E4B through LM Studio — private, offline RAG in a single binary.
-              </p>
-              <div class="tags">
-                <span class="tag gemma">Gemma 4 E4B</span>
-                <span class="tag gemma">LM Studio</span>
-                <span class="tag db">sqlite-vec</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">RAG · embeddings</span>
-              </div>
-              <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--go)">100% local</span><span
-                    class="metric-key">Inference</span></div>
-                <div class="metric"><span class="metric-val">Single binary</span><span class="metric-key">Deploy</span>
-                </div>
-                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="section-header" style="margin-bottom:10px">
-            <span class="lang-badge mojo">Mojo 🔥</span>
-            <h2 class="section-title">Minor Projects</h2>
-            <div class="section-line"></div>
-          </div>
-          <p class="minor-note">// Mojo — C-speed ML kernels where Python becomes the bottleneck</p>
-          <div class="cards-grid minor">
-
-            <div class="card mojo">
-              <div class="card-head">
-                <div class="card-icon">🔥</div>
-                <span class="card-status status-research">Research</span>
-              </div>
-              <h3 class="card-title">TensorFire</h3>
-              <p class="card-desc">
-                Hand-written Mojo SIMD tensor kernels for GGUF dequantisation — bridges
-                into InferCore via C ABI for 2–4× faster token generation on CPU-only
-                systems with AVX-512 support.
-              </p>
-              <div class="tags">
-                <span class="tag gemma">GGUF Gemma kernels</span>
-                <span class="tag">SIMD · AVX-512</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">C ABI bridge</span>
-              </div>
-              <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--mojo)">2–4×</span><span
-                    class="metric-key">CPU speedup</span></div>
-                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-              </div>
-            </div>
-
-            <div class="card mojo">
-              <div class="card-head">
-                <div class="card-icon">⚗️</div>
-                <span class="card-status status-research">Research</span>
-              </div>
-              <h3 class="card-title">FlashOps</h3>
-              <p class="card-desc">
-                Mojo re-implementation of Flash Attention v2 for CPU targets. Reduces
-                peak memory 40% versus naive attention, enabling longer Gemma context
-                windows on 16 GB RAM machines without any GPU.
-              </p>
-              <div class="tags">
-                <span class="tag gemma">Gemma long-ctx</span>
-                <span class="tag">Flash Attention 2</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">Benchmark suite</span>
-              </div>
-              <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--mojo)">−40%</span><span
-                    class="metric-key">Peak memory</span></div>
-                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
-              </div>
-            </div>
-
-            <div class="card mojo">
+            <div class="card web">
               <div class="card-head">
                 <div class="card-icon">📊</div>
-                <span class="card-status status-wip">WIP</span>
+                <span class="card-status status-active">Active</span>
               </div>
-              <h3 class="card-title">KernelBench-Mojo</h3>
+              <h3 class="card-title">local-model-dashboard</h3>
               <p class="card-desc">
-                Mojo micro-benchmark harness that stress-tests local inference kernels
-                (matmul, softmax, RoPE) against Gemma 4 E4B layer shapes. Generates
-                machine-readable JSON reports for easy CI regression tracking.
+                Vibrant, responsive client-side dashboard for monitoring local LLM instances (Ollama, LM Studio) with real-time token generation charts, system temperature, and memory logs.
               </p>
               <div class="tags">
-                <span class="tag gemma">Gemma 4 E4B</span>
-                <span class="tag gemma">LM Studio</span>
-                <span class="tag">matmul · RoPE</span>
-                <span class="tag git">GitHub</span>
-                <span class="tag">CI JSON reports</span>
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Ollama API</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Real-time</span>
               </div>
               <div class="card-metrics">
-                <div class="metric"><span class="metric-val" style="color:var(--mojo)">ns-level</span><span
-                    class="metric-key">Timing precision</span></div>
+                <div class="metric"><span class="metric-val" style="color:var(--web)">Ollama / Studio</span><span
+                    class="metric-key">API</span></div>
+                <div class="metric"><span class="metric-val">Chart.js</span><span class="metric-key">Visuals</span></div>
+                <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
+              </div>
+            </div>
+
+            <div class="card web">
+              <div class="card-head">
+                <div class="card-icon">🎮</div>
+                <span class="card-status status-active">Active</span>
+              </div>
+              <h3 class="card-title">gemma-playground</h3>
+              <p class="card-desc">
+                A web-based interactive prompt playground and chat interface built for testing local SLM system prompts, temperature settings, and structured output formatting.
+              </p>
+              <div class="tags">
+                <span class="tag gemma">Gemma 3 / 4</span>
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">WebGUI</span>
+                <span class="tag">System Prompts</span>
+                <span class="tag">JSON Output</span>
+              </div>
+              <div class="card-metrics">
+                <div class="metric"><span class="metric-val" style="color:var(--web)">Static Web</span><span
+                    class="metric-key">Deployment</span></div>
+                <div class="metric"><span class="metric-val">Structured JSON</span><span class="metric-key">Support</span></div>
                 <div class="metric"><span class="metric-val">MIT</span><span class="metric-key">License</span></div>
               </div>
             </div>
@@ -1423,7 +1420,6 @@
         </div>
       </section>
 
-      <div class="divider"></div>
 
       <!-- ══════════════════ TOOLCHAIN ════════════════════════════ -->
       <div class="toolchain">
@@ -1443,7 +1439,7 @@
             <div class="tool-pill"><span class="tool-dot" style="background:#06b6d4"></span>Docker / Podman</div>
             <div class="tool-pill"><span class="tool-dot" style="background:var(--py)"></span>uv + ruff</div>
             <div class="tool-pill"><span class="tool-dot" style="background:var(--rs)"></span>cargo + clippy</div>
-            <div class="tool-pill"><span class="tool-dot" style="background:var(--go)"></span>goreleaser</div>
+
             <div class="tool-pill"><span class="tool-dot" style="background:var(--rs)"></span>llama.cpp</div>
             <div class="tool-pill"><span class="tool-dot" style="background:var(--gemma)"></span>sqlite-vec</div>
           </div>
