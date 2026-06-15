@@ -28,30 +28,29 @@ Available for technical writing contracts, AI consulting engagements, and course
 ---
 
 ### Find Me On
-* 📰 [HackerNoon](https://hackernoon.com/@thomascherickal)
-* ✍️ [Medium](https://medium.com/@thomascherickal)
-* 💻 [Hashnode](https://hashnode.com/@thomascherickal)
-* ✉️ [Substack](https://thomascherickal.substack.com)
-* 👨‍💻 [DEV](https://dev.to/thomascherickal)
-* 💡 [Differ](https://differ.blog/@thomascherickal)
-* 📝 [Blogger](https://thomascherickal.blogspot.com)
-* 🐙 [GitHub](https://github.com/thomascherickal)
-* 💬 [Tumblr](https://thomascherickal.tumblr.com)
-* 🦋 [Bluesky](https://bsky.app/profile/thomascherickal.bsky.social)
-* 🏋️ [Exercism](https://exercism.org/profiles/thomascherickal)
-* ⭕ [Code 360](https://www.naukri.com/code360/profile/thomascherickal)
-* 📄 [Carrd](https://thomascherickal.carrd.co/)
-* 🥷 [CodeWars](https://www.codewars.com/users/thomascherickal)
-* 💼 [LinkedIn Profile](https://linkedin.com/in/thomascherickal)
-* 🌲 [Linktree](https://linktr.ee/thomascherickal)
-* 🏆 [LeetCode](https://leetcode.com/u/thomascherickal)
-* 🎯 [HackerRank](https://hackerrank.com/profile/thomascherickal)
-* 🎓 [GeeksforGeeks](https://www.geeksforgeeks.org/profile/thomascherickal)
-* 📈 [CodersRank](https://profile.codersrank.io/user/thomascherickal/)
-* 🌍 [HackerEarth](https://hackerearth.com/@thomascherickal)
-* 🦊 [GitLab](https://gitlab.com/thomascherickal)
-* ❓ [Quora](https://thomascherickal.quora.com)
-* 🤖 [Reddit](https://reddit.com/user/thomascherickal1)
+| 💻 Platform | 🔗 Link / Profile |
+| :--- | :--- |
+| 🌐 Profile Website | [thomascherickal.com](https://thomascherickal.com) |
+| 💼 LinkedIn Profile | [linkedin.com/in/thomascherickal](https://linkedin.com/in/thomascherickal) |
+| 🐙 GitHub Profile | [github.com/thomascherickal](https://github.com/thomascherickal) |
+| 🗞 HackerNoon Blog | [hackernoon.com/u/thomascherickal](https://hackernoon.com/u/thomascherickal) |
+| ✍️ Medium Channel | [thomascherickal.medium.com](https://thomascherickal.medium.com) |
+| 🔷 Hashnode Space | [thomascherickal.hashnode.dev](https://thomascherickal.hashnode.dev) |
+| 📬 Substack Channel | [thesingularitypoint.substack.com](https://thesingularitypoint.substack.com) |
+| 🔗 Linktree Directory | [linktr.ee/thomascherickal](https://linktr.ee/thomascherickal) |
+| 🎗 Patreon Community | [patreon.com/thomascherickal](https://www.patreon.com/thomascherickal) |
+| 🛒 Gumroad Store | [thomascherickal.gumroad.com](https://thomascherickal.gumroad.com) |
+| 🧠 Deep-ML Profile | [deep-ml.com/profile/thomascherickal](https://deep-ml.com/profile/JUKEax7axgZHEGqjZSKMiYZdaJG3) |
+| 📅 Topmate Consulting | [topmate.io/thomascherickal](https://topmate.io/thomascherickal) |
+| 🏢 MuckRack Portfolio | [muckrack.com/thomascherickal](https://muckrack.com/thomascherickal) |
+| 📧 Kit Newsletter | [thomascherickal.kit.com](https://thomascherickal.kit.com) |
+| 💡 LeetCode Profile | [leetcode.com/u/thomascherickal](https://leetcode.com/u/thomascherickal) |
+| 🏆 HackerRank Profile | [hackerrank.com/profile/thomascherickal](https://hackerrank.com/profile/thomascherickal) |
+| 🤓 GeeksforGeeks Profile | [geeksforgeeks.org/profile/thomascherickal](https://www.geeksforgeeks.org/profile/thomascherickal) |
+| 📄 HubPages Blog | [hubpages.com/@thomascherickal](https://hubpages.com/@thomascherickal) |
+| ☕ Ko-fi Tips | [ko-fi.com/thomascherickal](https://ko-fi.com/thomascherickal) |
+| 🃏 Carrd Landing Page | [thomascherickal.carrd.co](https://thomascherickal.carrd.co/) |
+| 🏅 CodersRank Profile | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
 
 ---
 
