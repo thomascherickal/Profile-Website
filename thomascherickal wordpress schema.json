@@ -62,15 +62,9 @@
         "AI Consulting",
         "AI Mentoring",
         "Website Creation",
-        "Online Brand Building",
-        "Blockchain and AI",
-        "Web3 and AI",
         "Agentic AI Tools",
         "Python",
         "Rust",
-        "Quantum Computing",
-        "Quantum AI",
-        "Quantum Use-Cases"
       ],
       "hasOfferCatalog": {
         "@id": "https://thomascherickal.com/#servicecatalog"
@@ -169,8 +163,7 @@
       "mainEntityOfPage": {
         "@id": "https://thomascherickal.com/#profilepage"
       },
-      "description": "Generative AI Engineer, SLM Engineer, LLM Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger, with expertise in AI strategy, AI Agent development, Local LLMs, SLM deployment, AI Engineering, and Career Mentoring. Specializing in open-source Generative AI, SLMs, LLMs, AI Agents, Quantum Computing, QAI, Blockchain, Web3, Python, and Rust.",
-      "image": {
+      "description": "TDD Rust AI/ML Engineer, TDD Python AI/ML Engineer, Generative AI Engineer, SLM Engineer, LLM Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger, with expertise in AI strategy, AI Agent development, Local LLMs, SLM deployment, AI Engineering."image": {
         "@id": "https://thomascherickal.com/#primaryimage"
       },
       "jobTitle": " Generative AI Consultant & Independent Research Blogger",
@@ -221,8 +214,8 @@
         {
           "@type": "Occupation",
           "name": "Generative AI Engineer",
-          "description": "Builds open-source Generative AI projects in Python and Rust that implement leading LLM and SLM solutions locally, delivering enduring commercial value.",
-          "skills": "Python, Rust, Generative AI, LLM Engineering, Open Source Development"
+          "description": "Builds open-source Generative AI projects with TDD and 100% code coverage in Python and Rust that implement leading LLM and SLM solutions locally, delivering enduring commercial value.",
+          "skills": "TDD, Python, Rust, Generative AI, LLM Engineering, Open Source Development"
         },
         {
           "@type": "Occupation",
@@ -277,14 +270,6 @@
         "AI Agents",
         "Prompt Engineering",
         "Retrieval-Augmented Generation",
-        "Quantum Computing",
-        "Quantum AI",
-        "Blockchain",
-        "Blockchain AI",
-        "Decentralized Finance",
-        "Web3",
-        "Web3 AI",
-        "Cybersecurity",
         "Python",
         "Rust",
         "Open Source Software",
@@ -292,7 +277,6 @@
         "AI Consulting for SLMs",
         "Open Source Development",
         "AI Training and Mentoring",
-        "Online Brand Building",
         "Career Strategy",
         "SLM Engineering",
         "LLM Engineering"
@@ -306,26 +290,15 @@
         "https://thomascherickal.substack.com",
         "https://thesingularitypoint.substack.com",
         "https://thomascherickal.kit.com",
-        "https://differ.blog/@thomascherickal",
         "https://hubpages.com/@thomascherickal",
         "https://topmate.io/thomascherickal",
         "https://t.me/thomascherickal",
-        "https://thomascherickal.tumblr.com",
         "https://thomascherickal.hashnode.dev",
         "https://thomascherickal.gumroad.com",
-        "https://thesingularitypoint.blogspot.com",
-        "https://thomascherickal.contently.com",
         "https://patreon.com/thomascherickal",
         "https://thomascherickal.quora.com",
         "https://muckrack.com/thomascherickal",
-        "https://bsky.app/profile/thomascherickal.bsky.social",
-        "https://gitlab.com/thomascherickal",
         "https://www.hackerrank.com/thomascherickal",
-        "https://www.hackerearth.com/@thomascherickal",
-        "https://www.codewars.com/users/thomascherickal",
-        "https://exercism.org/profiles/thomascherickal",
-        "https://www.kaggle.com/thomascherickal",
-        "https://takeuforward.org/profile/thomascherickal",
         "https://leetcode.com/u/thomascherickal",
         "https://linktr.ee/thomascherickal"
       ]
